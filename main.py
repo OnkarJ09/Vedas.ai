@@ -1,4 +1,4 @@
-from features import date_time, greet_user, websearch, weather, openai
+from features import date_time, greet_user, websearch, weather, openai, ai_chat
 from features.appopener import appopener_open, appopener_close, appopener_list
 from features.audio import say
 import speech_recognition as sr
@@ -162,6 +162,11 @@ class Pragati:
                 ################    A.I.    ##################
                 elif "using artificial intelligence" in query:
                     openai.ai(prompt=query)
+
+                ################    Chatting with A.I   ##################
+                else:
+                    print("Chatting...")
+                    ai_chat.chat(query)
 
 
 Pragati.virtual_assistant()
