@@ -3,6 +3,7 @@ from features.appopener import appopener_open, appopener_close, appopener_list
 from features.audio import say
 import speech_recognition as sr
 import webbrowser
+import pyautogui
 
 
 # This will take user input from microphone as source
@@ -126,6 +127,37 @@ class Pragati:
                         if f"open {site[0]}" in query:
                             speak(f"opening {site[0]}")
                             webbrowser.open(site[1])
+
+                ################    Windows Automation    ##################
+                elif "maximize this window" in query:
+                    pyautogui.hotkey('win', 'up')
+
+                elif "minimize this window" in query:
+                    pyautogui.hotkey('win', 'down')
+
+                elif "shift this window" in query:
+                    # this will shift windows on the top
+                    if "shift this window to right" in query:
+                        pyautogui.hotkey('win', 'right')
+
+                    elif "shift this window to left" in query:
+                        pyautogui.hotkey('win', 'left')
+
+                    elif "shift this window to top right" in query:
+                        with pyautogui.hold('win'):
+                            pyautogui.press(['right', 'up'])
+
+                    elif "shift this window to top left" in query:
+                        with pyautogui.hold('win'):
+                            pyautogui.press(['left', 'up'])
+
+                    elif "shift this window to bottom right" in query:
+                        with pyautogui.hold('win'):
+                            pyautogui.press(['right', 'down'])
+
+                    elif "shift this window to bottom left" in query:
+                        with pyautogui.hold('win'):
+                            pyautogui.press(['left', 'down'])
 
 
 Pragati.virtual_assistant()
