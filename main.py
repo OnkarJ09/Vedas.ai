@@ -1,4 +1,5 @@
 from features import date_time, greet_user, websearch, weather
+from features.appopener import appopener_open, appopener_close, appopener_list
 from features.audio import say
 import speech_recognition as sr
 import webbrowser
@@ -83,6 +84,18 @@ class Pragati:
                     q = weather.get_weather_data(b)
                     say(q)
                     print(q)
+
+                #####################      Open/Close Different apps     #############################
+                elif "open" in query:
+                    inp = query
+                    appopener_open(inp)
+
+                elif "close" in query:
+                    inp = query
+                    appopener_close(inp)
+
+                elif "list of apps" in query:
+                    appopener_list(inp)
 
 
 Pragati.virtual_assistant()
