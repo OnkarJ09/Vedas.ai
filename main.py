@@ -69,7 +69,7 @@ class Pragati:
                 elif "year" in query:
                     date_time.year()
 
-                ######################     Search Engine     #######################
+                ######################     Search Engine     ######################
                 elif "search for" in query:
                     querys = query.replace("search for", '')
                     websearch.search_and_open(querys)
