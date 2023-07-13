@@ -106,5 +106,26 @@ class Pragati:
                     webbrowser.open(f"https://www.youtube.com/results?search_query={q}")
                     say(f"searching on youtube for {q}")
 
+                ################    Opening Different Web-sites    ##################
+                elif "" in query:
+                    sites = [["youtube", 'https://www.youtube.com'],
+                             ["facebook", 'https://www.facebook.com'],
+                             ["instagram", 'https://www.instagram.com'],
+                             ["w3schools", 'https://www.w3schools.com'],
+                             ["w3schools learning", 'https://my-learning.w3schools.com'],
+                             ["whatsapp", 'https://web.whatsapp.com'],
+                             ["telegram", 'https://web.telegram.com'],
+                             ["github", 'https://github.com'],
+                             ["replit", 'https://replit.com'],
+                             ["g mail", 'https://mail.google.com'],
+                             ["google", 'https://www.google.com'],
+                             ["google calendar", 'https://calendar.google.com'],
+                             ["online python packages", 'https://pypi.org'],
+                             ["chat g p t", 'https://chat.openai.com']]
+                    for site in sites:
+                        if f"open {site[0]}" in query:
+                            speak(f"opening {site[0]}")
+                            webbrowser.open(site[1])
+
 
 Pragati.virtual_assistant()
