@@ -97,5 +97,14 @@ class Pragati:
                 elif "list of apps" in query:
                     appopener_list(inp)
 
+                ################    Opening Youtube_search   ####################
+                elif "youtube" in query:
+                    say("what you want to search")
+                    print("what you want to search?")
+                    q = takecommand().lower()
+                    q = q.replace("search for", "")
+                    webbrowser.open(f"https://www.youtube.com/results?search_query={q}")
+                    say(f"searching on youtube for {q}")
+
 
 Pragati.virtual_assistant()
