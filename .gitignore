@@ -1,0 +1,5 @@
+# For excluding Virtual-Environment
+venv/
+*.pyc
+*.xml
+.idea
