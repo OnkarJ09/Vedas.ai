@@ -1,4 +1,4 @@
-from features import date_time, greet_user, websearch, weather, openai, ai_chat
+from features import date_time, greet_user, websearch, weather, openai, ai_chat, wikipedia
 from features.appopener import appopener_open, appopener_close, appopener_list
 from features.audio import say
 import speech_recognition as sr
@@ -97,6 +97,11 @@ class Pragati:
 
                 elif "list of apps" in query:
                     appopener_list()
+
+                ####################       Wikipedia    #########################
+                elif "wikipedia" in query:
+                    query = query.replace("search wikipedia", '')
+                    wikipedia.wiki(query)
 
                 ################    Opening Youtube_search   ####################
                 elif "youtube" in query:
