@@ -1,4 +1,4 @@
-from features import date_time, greet_user, websearch, weather
+from features import date_time, greet_user, websearch, weather, openai
 from features.appopener import appopener_open, appopener_close, appopener_list
 from features.audio import say
 import speech_recognition as sr
@@ -96,19 +96,19 @@ class Pragati:
                     appopener_close(inp)
 
                 elif "list of apps" in query:
-                    appopener_list(inp)
+                    appopener_list()
 
                 ################    Opening Youtube_search   ####################
                 elif "youtube" in query:
                     say("what you want to search")
                     print("what you want to search?")
-                    q = takecommand().lower()
+                    q = take_command().lower()
                     q = q.replace("search for", "")
                     webbrowser.open(f"https://www.youtube.com/results?search_query={q}")
                     say(f"searching on youtube for {q}")
 
                 ################    Opening Different Web-sites    ##################
-                elif "" in query:
+                elif "start" in query:
                     sites = [["youtube", 'https://www.youtube.com'],
                              ["facebook", 'https://www.facebook.com'],
                              ["instagram", 'https://www.instagram.com'],
@@ -158,6 +158,10 @@ class Pragati:
                     elif "shift this window to bottom left" in query:
                         with pyautogui.hold('win'):
                             pyautogui.press(['left', 'down'])
+
+                ################    A.I.    ##################
+                elif "using artificial intelligence" in query:
+                    openai.ai(prompt=query)
 
 
 Pragati.virtual_assistant()

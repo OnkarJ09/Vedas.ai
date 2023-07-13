@@ -11,6 +11,6 @@ def appopener_close(inp):
     close(app_name, match_closest=True, output=False)
 
 
-def appopener_list(inp):
+def appopener_list():
     mklist(name='app_data.json')
     give_appnames()
