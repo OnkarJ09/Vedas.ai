@@ -1,6 +1,7 @@
-from features import date_time, greet_user
+from features import date_time, greet_user, websearch
 from features.audio import say
 import speech_recognition as sr
+import webbrowser
 
 
 # This will take user input from microphone as source
@@ -34,7 +35,7 @@ class Pragati:
             while True:
                 query = take_command().lower()
 
-                #    Greetings
+                ########################    Greet-User     #######################
                 if "good morning" in query:
                     greet_user.greetuser()
 
@@ -47,11 +48,13 @@ class Pragati:
                 elif "good night" in query:
                     greet_user.greetuser()
 
-                #    Date & Time
+                ########################    Date, Time, day, month, year   #######################
                 elif "date" in query:
+
                     date_time.date()
 
                 elif "time" in query:
+
                     date_time.time()
 
                 elif "date and time" in query:
@@ -65,6 +68,14 @@ class Pragati:
 
                 elif "year" in query:
                     date_time.year()
+
+                ######################     Search Engine     #######################
+                elif "search for" in query:
+                    querys = query.replace("search for", '')
+                    websearch.search_and_open(querys)
+                    search_url = f"https://www.google.com/search?={querys}"
+                    webbrowser.open(search_url)
+                    say(f"ok, searching for {querys}")
 
 
 Pragati.virtual_assistant()
