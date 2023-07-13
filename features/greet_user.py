@@ -1,9 +1,10 @@
 from features.audio import say
 import datetime
 
+
 def greetuser():
     hour = int(datetime.datetime.now().hour)
-    if hour >=0 and hour < 12:
+    if hour >= 0 and hour < 12:
         say("Good morning")
         print("Good morning")
     elif hour >= 12 and hour < 17:

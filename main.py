@@ -1,4 +1,4 @@
-from features import date_time, greet_user, websearch
+from features import date_time, greet_user, websearch, weather
 from features.audio import say
 import speech_recognition as sr
 import webbrowser
@@ -76,6 +76,13 @@ class Pragati:
                     search_url = f"https://www.google.com/search?={querys}"
                     webbrowser.open(search_url)
                     say(f"ok, searching for {querys}")
+
+                #####################      Weather     #############################
+                elif "weather" in query:
+                    b = query.replace("what is the weather in", '')
+                    q = weather.get_weather_data(b)
+                    say(q)
+                    print(q)
 
 
 Pragati.virtual_assistant()
