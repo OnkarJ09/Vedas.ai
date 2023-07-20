@@ -1,13 +1,19 @@
 from features.config import apikey
 import openai
 import os
+import pytest
+
+
+@pytest.fixture(autouse=True)
+def prompt():
+    return "PRAGATI.ai"
 
 
 class NoResponse(Exception):
     pass
 
 
-def ai(prompt):
+def test_ai(prompt):
     openai.api_key = apikey
     text = f"OpenAI response for Prompt: {prompt} \n *************************\n\n"
 

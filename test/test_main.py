@@ -1,13 +1,25 @@
-from features import date_time, greet_user, websearch, weather, openai, ai_chat, wikipedia
-from features.appopener import appopener_open, appopener_close, appopener_list
-from features.audio import say
+from test.test_features import test_, test_greet_user, test_websearch, test_weather, test_openai, test_ai_chat, \
+    test_wikipedia
+from test.test_features.test_appopener import test_appopener_open, test_appopener_close, test_appopener_list
+from test.test_features.test_audio import test_say
 import speech_recognition as sr
 import webbrowser
 import pyautogui
+import pytest
 
+@pytest.fixture(autouse=True)
+def query():
+    return "PRAGATI.ai"
 
-# This will take user input from microphone as source
-def take_command():
+@pytest.fixture(autouse=True)
+def inp():
+    return "PRAGATI.ai"
+
+@pytest.fixture(autouse=True)
+def audio():
+    return "PRAGATI.ai"
+
+def test_take_command():
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening...")
@@ -25,92 +37,90 @@ def take_command():
     return query
 
 
-class Pragati:
-    def virtual_assistant():
-        greet_user.greetuser()
+class TestPragati:
+    def test_virtual_assistant():
+        test_greet_user.test_greetuser()
         print("I am Pragati ai your personal virtual assistant")
-        say("I am Pragati ai your personal virtual assistant")
+        test_say("I am Pragati ai your personal virtual assistant")
         print("How can I help you?")
-        say("How can I help you?")
+        test_say("How can I help you?")
 
         if __name__ == "__main__":
             while True:
-                query = take_command().lower()
+                query = test_take_command().lower()
 
                 ########################    Greet-User     #######################
                 if "good morning" in query:
-                    greet_user.greetuser()
+                    test_greet_user.test_greetuser()
 
                 elif "good afternoon" in query:
-                    greet_user.greetuser()
+                    test_greet_user.test_greetuser()
 
                 elif "good evening" in query:
-                    greet_user.greetuser()
+                    test_greet_user.test_greetuser()
 
                 elif "good night" in query:
-                    greet_user.greetuser()
+                    test_greet_user.test_greetuser()
 
                 ########################    Date, Time, day, month, year   #######################
                 elif "date" in query:
-
-                    date_time.date()
+                    test_date_time.test_date()
 
                 elif "time" in query:
-
-                    date_time.time()
+                    test_date_time.test_time()
 
                 elif "date and time" in query:
-                    date_time.date_time()
+                    test_date_time.test_date_time()
 
                 elif "day" in query:
-                    date_time.day()
+                    test_date_time.test_day()
 
                 elif "month" in query:
-                    date_time.month()
+                    test_date_time.test_month()
 
                 elif "year" in query:
-                    date_time.year()
+                    test_date_time.test_year()
 
                 ######################     Search Engine     #######################
                 elif "search for" in query:
                     querys = query.replace("search for", '')
-                    websearch.search_and_open(querys)
+                    test_websearch.test_search_and_open(querys)
                     search_url = f"https://www.google.com/search?={querys}"
                     webbrowser.open(search_url)
-                    say(f"ok, searching for {querys}")
+                    test_say(f"ok, searching for {querys}")
 
                 #####################      Weather     #############################
                 elif "weather" in query:
                     b = query.replace("what is the weather in", '')
-                    q = weather.get_weather_data(b)
-                    say(q)
+                    q = test_weather.test_get_weather_data(b)
+                    test_say(q)
                     print(q)
 
                 #####################      Open/Close Different apps     #############################
                 elif "open" in query:
                     inp = query
-                    appopener_open(inp)
+                    test_appopener_open(inp)
 
                 elif "close" in query:
                     inp = query
-                    appopener_close(inp)
+                    test_appopener_close(inp)
 
                 elif "list of apps" in query:
-                    appopener_list()
+                    test_appopener_list()
 
                 ####################       Wikipedia    #########################
                 elif "wikipedia" in query:
                     query = query.replace("search wikipedia", '')
-                    wikipedia.wiki(query)
+                    test_wikipedia.test_wiki(query)
 
                 ################    Opening Youtube_search   ####################
                 elif "youtube" in query:
-                    say("what you want to search")
+                    test_say("what you want to search")
                     print("what you want to search?")
-                    q = take_command().lower()
+                    q = test_take_command().lower()
                     q = q.replace("search for", "")
                     webbrowser.open(f"https://www.youtube.com/results?search_query={q}")
-                    say(f"searching on youtube for {q}")
+                    test_say(f"searching on youtube for {q}")
 
                 ################    Opening Different Web-sites    ##################
                 elif "start" in query:
@@ -130,7 +140,7 @@ class Pragati:
                              ["chat g p t", 'https://chat.openai.com']]
                     for site in sites:
                         if f"open {site[0]}" in query:
-                            say(f"opening {site[0]}")
+                            test_say(f"opening {site[0]}")
                             webbrowser.open(site[1])
 
                 ################    Windows Automation    ##################
@@ -166,12 +176,12 @@ class Pragati:
 
                 ################    A.I.    ##################
                 elif "using artificial intelligence" in query:
-                    openai.ai(prompt=query)
+                    test_openai.test_ai(prompt=query)
 
                 ################    Chatting with A.I   ##################
                 else:
                     print("Chatting...")
-                    ai_chat.chat(query)
+                    test_ai_chat.test_chat(query)
 
 
-Pragati.virtual_assistant()
+TestPragati.test_virtual_assistant()
