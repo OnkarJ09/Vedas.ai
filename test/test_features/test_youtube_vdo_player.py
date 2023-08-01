@@ -11,4 +11,3 @@ def query():
 def test_yt_vdo_player(query):
     test_say(f"Playing {query} on YouTube")
     pywhatkit.playonyt(query)
-
