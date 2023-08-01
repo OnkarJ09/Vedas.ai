@@ -1,10 +1,13 @@
-from features import date_time, greet_user, websearch, weather, openai, ai_chat, wikipedia
+from features import date_time, greet_user, websearch, weather, openai, ai_chat, wikipedia, youtube_video_player
 from features.appopener import appopener_open, appopener_close, appopener_list
 from features.audio import say
 import speech_recognition as sr
 import webbrowser
 import pyautogui
 
+
+class Ytvdoplayer(Exception):
+    pass
 
 # This will take user input from microphone as source
 def take_command():
@@ -104,13 +107,18 @@ class Pragati:
                     wikipedia.wiki(query)
 
                 ################    Opening Youtube_search   ####################
-                elif "youtube" in query:
-                    say("what you want to search")
-                    print("what you want to search?")
-                    q = take_command().lower()
-                    q = q.replace("search for", "")
-                    webbrowser.open(f"https://www.youtube.com/results?search_query={q}")
-                    say(f"searching on youtube for {q}")
+                elif "search on youtube for" in query:
+                    query = query.replace("search on youtube for", '')
+                    try:
+                        say(f"Trying to play {query} on youtube")
+                        youtube_video_player.yt_vdo_player(query)
+                    except Ytvdoplayer:
+                        raise "Sorry!! Please Try Again"
+
+                ################    Youtube Video Player    ###############
+                elif "play on youtube" in query:
+                    query = query.replace("play on youtube", '')
+                    youtube_video_player.yt_vdo_player(query)
 
                 ################    Opening Different Web-sites    ##################
                 elif "start" in query:
