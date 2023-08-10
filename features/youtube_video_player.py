@@ -4,5 +4,5 @@ import pywhatkit
 
 def yt_vdo_player(query):
     pywhatkit.playonyt(query)
-    say(f"Playing {query} on YouTube")
-    return f'{query}'
+    say(f"Playing {query}")
+    # return f'{query}'

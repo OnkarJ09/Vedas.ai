@@ -25,8 +25,8 @@ def take_command():
     except Exception as e:
         print(e)
         print("Say that again please...")
-        return 'None'
-
+        # return 'None'
+    return 'None'
 
 class Pragati:
     def virtual_assistant():
@@ -117,9 +117,9 @@ class Pragati:
                         raise "Sorry!! Please Try Again"
 
                 ################    Youtube Video Player    ###############
-                # elif "play on youtube" or f'play {query} on youtube' in query:
-                #     query = query.replace("play on youtube", '')
-                #     youtube_video_player.yt_vdo_player(query)
+                elif "play" and "on youtube" in query:
+                    query = query.replace("play", '')
+                    youtube_video_player.yt_vdo_player(query)
 
                 ################    Opening Different Web-sites    ##################
                 elif "start" in query:
