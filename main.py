@@ -21,11 +21,11 @@ def take_command():
         print("Recognizing...")
         query = r.recognize_google(audio, language='en-in')
         print(f"User said: {query}\n")
+        return query
     except Exception as e:
         print(e)
         print("Say that again please...")
-        return "None"
-    return query
+        return 'None'
 
 
 class Pragati:
@@ -110,15 +110,16 @@ class Pragati:
                 elif "search on youtube for" in query:
                     query = query.replace("search on youtube for", '')
                     try:
-                        say(f"Trying to play {query} on youtube")
-                        youtube_video_player.yt_vdo_player(query)
+                        say(f"Trying to search {query} on youtube")
+                        webbrowser.open(url=f'https://www.youtube.com/results?search_query={query}')
                     except Ytvdoplayer:
+                        say("Sorry!! Please Try Again")
                         raise "Sorry!! Please Try Again"
 
                 ################    Youtube Video Player    ###############
-                elif "play on youtube" in query:
-                    query = query.replace("play on youtube", '')
-                    youtube_video_player.yt_vdo_player(query)
+                # elif "play on youtube" or f'play {query} on youtube' in query:
+                #     query = query.replace("play on youtube", '')
+                #     youtube_video_player.yt_vdo_player(query)
 
                 ################    Opening Different Web-sites    ##################
                 elif "start" in query:
