@@ -114,7 +114,7 @@ class Pragati:
                         webbrowser.open(url=f'https://www.youtube.com/results?search_query={query}')
                     except Ytvdoplayer:
                         say("Sorry!! Please Try Again")
-                        raise "Sorry!! Please Try Again"
+                        print("Sorry!! Please Try Again")
 
                 ################    Youtube Video Player    ###############
                 elif "play" and "on youtube" in query:
