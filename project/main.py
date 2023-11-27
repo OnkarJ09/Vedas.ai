@@ -1,6 +1,7 @@
-from features import date_time, greet_user, websearch, weather, openai, ai_chat, wikipedia, youtube_video_player
-from features.appopener import appopener_open, appopener_close, appopener_list
-from features.audio import say
+from project.features import date_time, greet_user, weather, openai, wikipedia, youtube_video_player
+from project.features import websearch, ai_chat
+from project.features.appopener import appopener_open, appopener_close, appopener_list
+from project.features import say
 import speech_recognition as sr
 import webbrowser
 import pyautogui
@@ -28,11 +29,11 @@ def take_command():
         # return 'None'
     return 'None'
 
-class Pragati:
+class Vedas:
     def virtual_assistant():
         greet_user.greetuser()
-        print("I am Pragati ai your personal virtual assistant")
-        say("I am Pragati ai your personal virtual assistant")
+        print("I am Vedas ai your personal virtual assistant")
+        say("I am Vedas ai your personal virtual assistant")
         print("How can I help you?")
         say("How can I help you?")
 
@@ -183,4 +184,4 @@ class Pragati:
                     ai_chat.chat(query)
 
 
-Pragati.virtual_assistant()
+Vedas.virtual_assistant()

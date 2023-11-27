@@ -1,13 +1,20 @@
-from features.config import apikey
+import pytest
+
+from project.test.test_features.test_config import apikey
 import openai
 import os
+
+
+@pytest.fixture(autouse=True)
+def prmpt():
+    return "Vedas.ai"
 
 
 class NoResponse(Exception):
     pass
 
 
-def ai(prompt):
+def test_ai(prompt):
     openai.api_key = apikey
     text = f"OpenAI response for Prompt: {prompt} \n *************************\n\n"
 

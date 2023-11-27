@@ -4,7 +4,7 @@ import pytest
 
 @pytest.fixture(autouse=True)
 def audio():
-    return "PRAGATI.ai"
+    return "Vedas.ai"
 
 
 def test_say(audio):

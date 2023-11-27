@@ -1,12 +1,6 @@
-from test.test_features.test_config import apikey
-from test.test_features.test_audio import test_say
+from project.features.config import apikey
+from project.features.audio import say
 import openai
-import pytest
-
-
-@pytest.fixture(autouse=True)
-def query():
-    return "PRAGATI_ai"
 
 
 class NoResponseException(Exception):
@@ -14,11 +8,11 @@ class NoResponseException(Exception):
 
 
 chatStr = ""
-def test_chat(query):
+def chat(query):
     global chatStr
     print(chatStr)
     openai.api_key = apikey
-    chatStr += f"You: {query}\n PRAGATI_ai: "
+    chatStr += f"You: {query}\n Vedas_ai: "
     response = openai.Completion.create(
         model="text-davinci-003",
         prompt=chatStr,

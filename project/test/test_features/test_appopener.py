@@ -4,7 +4,7 @@ import pytest
 
 @pytest.fixture(autouse=True)
 def inp():
-    return "PRAGATI.ai"
+    return "Vedas.ai"
 
 def test_appopener_open(inp):
     app_name = inp.replace("open", '')
