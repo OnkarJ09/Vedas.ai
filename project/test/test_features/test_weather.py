@@ -1,5 +1,6 @@
 import requests
 import json
+import pytest
 
 
 @pytest.fixture(autouse=True)
@@ -20,4 +21,4 @@ def test_get_weather_data(city):
     a = f"The weather in {city} is {weather_condition}. The temperature is {temperature} degrees Celsius. " \
         f"The humidity is {humidity}%. The feels like is {feels_like} degrees Celsius."
     print(a)
-    return a
+    assert a

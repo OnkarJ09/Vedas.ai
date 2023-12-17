@@ -1,5 +1,12 @@
+import pytest
+
 from project.test.test_features.test_audio import test_say
 import datetime
+
+
+@pytest.fixture(autouse=True)
+def audio():
+    return "Vedas.ai"
 
 
 # It will return the current date and time in the format of "Sunday, 12 March 2023 10:00 AM"

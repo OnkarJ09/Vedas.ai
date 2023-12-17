@@ -1,7 +1,7 @@
 from project.features import date_time, greet_user, weather, openai, wikipedia, youtube_video_player
 from project.features import websearch, ai_chat
 from project.features.appopener import appopener_open, appopener_close, appopener_list
-from project.features import say
+from project.features.audio import say
 import speech_recognition as sr
 import webbrowser
 import pyautogui
@@ -56,11 +56,9 @@ class Vedas:
 
                 ########################    Date, Time, day, month, year   #######################
                 elif "date" in query:
-
                     date_time.date()
 
                 elif "time" in query:
-
                     date_time.time()
 
                 elif "date and time" in query:
