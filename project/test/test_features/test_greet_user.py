@@ -1,5 +1,11 @@
 from project.test.test_features.test_audio import test_say
 import datetime
+import pytest
+
+
+@pytest.fixture(autouse=True)
+def audio():
+    return "Vedas.ai"
 
 
 def test_greetuser():

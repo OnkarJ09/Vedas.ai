@@ -6,7 +6,7 @@ import os
 
 
 @pytest.fixture(autouse=True)
-def prmpt():
+def prompt():
     return "Vedas.ai"
 
 

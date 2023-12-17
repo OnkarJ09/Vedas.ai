@@ -6,6 +6,11 @@ import pywhatkit
 
 @pytest.fixture(autouse=True)
 def query():
+    return "Vedas"
+
+
+@pytest.fixture(autouse=True)
+def audio():
     return "Vedas.ai"
 
 def test_yt_vdo_player(query):
