@@ -10,6 +10,7 @@ import pyautogui
 class Ytvdoplayer(Exception):
     pass
 
+
 # This will take user input from microphone as source
 def take_command():
     r = sr.Recognizer()
@@ -29,7 +30,9 @@ def take_command():
         # return 'None'
     return 'None'
 
+
 class Vedas:
+    @staticmethod
     def virtual_assistant():
         greet_user.greetuser()
         print("I am Vedas ai your personal virtual assistant")
