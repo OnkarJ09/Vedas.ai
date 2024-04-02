@@ -5,6 +5,7 @@ from project.features.audio import say
 import speech_recognition as sr
 import webbrowser
 import pyautogui
+from mtranslate import translate
 
 
 class Ytvdoplayer(Exception):
@@ -21,6 +22,8 @@ def take_command():
         audio = r.listen(source)
     try:
         print("Recognizing...")
+        # to_translate = audio
+        # translate(to_translate, 'en')
         query = r.recognize_google(audio, language='en-in')
         print(f"User said: {query}\n")
         return query
