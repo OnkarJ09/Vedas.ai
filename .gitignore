@@ -17,4 +17,4 @@ test/Openai/*.txt
 test/test_features/Openai/*.txt
 
 # For Excluding temporary files of my own use
-temp/*
+bin/temp/scrap

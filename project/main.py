@@ -1,11 +1,10 @@
 from project.features import date_time, greet_user, weather, openai, wikipedia, youtube_video_player
-from project.features import websearch, ai_chat
+from project.features import websearch, ai_chat, translator
 from project.features.appopener import appopener_open, appopener_close, appopener_list
 from project.features.audio import say
 import speech_recognition as sr
 import webbrowser
 import pyautogui
-from mtranslate import translate
 
 
 class Ytvdoplayer(Exception):
@@ -22,9 +21,9 @@ def take_command():
         audio = r.listen(source)
     try:
         print("Recognizing...")
-        # to_translate = audio
-        # translate(to_translate, 'en')
-        query = r.recognize_google(audio, language='en-in')
+        text_to_translate = r.recognize_google(audio, language='auto')
+        target_language = "en"
+        query = translator.translate_text(text_to_translate, target_language)
         print(f"User said: {query}\n")
         return query
     except Exception as e:
