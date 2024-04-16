@@ -3,6 +3,23 @@
 
 import speech_recognition as sr
 import requests
+import pyttsx3
+
+
+def say(audio, lang='hi'):
+    engine = pyttsx3.init('sapi5')
+    voices = engine.getProperty('voices')
+    for voice in voices:
+        if lang in voice.languages:
+            engine.setProperty('voice', voice.id)
+            break
+    # engine.setProperty('voice', voices[1].id)
+    engine.getProperty('rate')
+    engine.setProperty('rate', 150)
+    # engine.setProperty('language', 'hi')
+    # engine.setProperty('voice', 'hi')
+    engine.say(audio)
+    engine.runAndWait()
 
 
 def translate_text(text, target_language):
@@ -34,7 +51,9 @@ def take_command():
 
 
 translations = translate_text(take_command(), "en")
-print(translations)
+again_trans = translate_text(translations, "hi")
+say(again_trans)
+print(again_trans)
 # Example usage
 # text_to_translate = take_command()
 # target_language = "fr"
