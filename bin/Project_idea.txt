@@ -1,0 +1,54 @@
+Vedas.ai  ./Vedas.ai
+  bin
+    Project_idea.txt
+  Logo
+    Vedas Logo.gif
+    Vedas Logo.jpg
+    Vedas Logo.mp4
+    Vedas Logo.png
+    Vedas Logo croped.png
+  project
+    features
+      __init__.py
+      ai_chat.py
+      appopener.py
+      audio.py
+      config.py
+      date_time.py
+      greet_user.py
+      openai.py
+      weather.py
+      websearch.py
+      wikipedia.py
+      youtube_video_player.py
+    test
+      test_features
+        __init__.py
+        test_ai_chat.py
+        test_appopener.py
+        test_audio.py
+        test_config.py
+        test_date_time.py
+        test_greet_user.py
+        test_opeanai.py
+        test_weather.py
+        test_websearch.py
+        test_wikipedia.py
+        test_youtube_vdo_player.py
+      __init__.py
+      app_data.json
+      test_main.py
+    __init__.py
+    main.py
+
+  venv  library root
+    Lib
+    Scripts
+    .gitignore
+    pyvenv.cfg
+  .gitattributes
+  .gitignore
+  app_data.json
+  Readme.md
+  requirements.txt
+
