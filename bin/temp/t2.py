@@ -1,25 +1,12 @@
-# Google's Unofficial Python API for Translation (faster then t1)
+# Google's Unofficial Python API for Translation (faster)
 
 
 import speech_recognition as sr
 import requests
 import pyttsx3
-
-
-def say(audio, lang='hi'):
-    engine = pyttsx3.init('sapi5')
-    voices = engine.getProperty('voices')
-    for voice in voices:
-        if lang in voice.languages:
-            engine.setProperty('voice', voice.id)
-            break
-    # engine.setProperty('voice', voices[1].id)
-    engine.getProperty('rate')
-    engine.setProperty('rate', 150)
-    # engine.setProperty('language', 'hi')
-    # engine.setProperty('voice', 'hi')
-    engine.say(audio)
-    engine.runAndWait()
+from gtts import gTTS
+import os
+import playsound
 
 
 def translate_text(text, target_language):
@@ -50,10 +37,18 @@ def take_command():
     return 'None'
 
 
+def say(audio, lang='hi'):
+    tts = gTTS(text=audio, lang=lang, slow=False)
+    tts.save("output.mp3")
+    playsound.playsound("output.mp3")
+
+
 translations = translate_text(take_command(), "en")
 again_trans = translate_text(translations, "hi")
 say(again_trans)
 print(again_trans)
+
+# say("hello")
 # Example usage
 # text_to_translate = take_command()
 # target_language = "fr"
