@@ -1,11 +1,8 @@
-import pyttsx3
+from gtts import gTTS
+import playsound
 
 
-def say(audio):
-    engine = pyttsx3.init('sapi5')
-    voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[1].id)
-    engine.getProperty('rate')
-    engine.setProperty('rate', 150)
-    engine.say(audio)
-    engine.runAndWait()
+def say(audio, lang='hi'):
+    tts = gTTS(text=audio, lang=lang, slow=False)
+    tts.save("output.mp3")
+    playsound.playsound("output.mp3")

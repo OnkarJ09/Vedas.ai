@@ -7,6 +7,7 @@ import pyttsx3
 from gtts import gTTS
 import os
 import playsound
+import langid
 
 
 def translate_text(text, target_language):
@@ -25,6 +26,9 @@ def take_command():
         audio = r.listen(source)
     try:
         print("Recognizing...")
+
+        #todo: Add here the langid para/ function to detect the language
+
         query = r.recognize_google(audio, language='hi')
         # target_language = "en"
         # query = translator.translate_text(text_to_translate, target_language)
