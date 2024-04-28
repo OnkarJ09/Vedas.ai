@@ -21,3 +21,7 @@ bin/temp/scrap
 
 # For gtts voice data
 *\output.mp3
+
+# For test
+bin/temp/lid.176.bin
+bin/temp/lid.176.ftz
