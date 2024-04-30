@@ -1,7 +1,7 @@
-from project.features import date_time, greet_user, weather, openai, wikipedia, youtube_video_player
-from project.features import websearch, ai_chat, translator
-from project.features.appopener import appopener_open, appopener_close, appopener_list
-from project.features.audio import say
+from vedascli.plugins import date_time, greet_user, weather, openai, wikipedia, youtube_video_player
+from vedascli.plugins import websearch, ai_chat, translator
+from vedascli.plugins.appopener import appopener_open, appopener_close, appopener_list
+from vedascli.plugins.audio import say
 import speech_recognition as sr
 import webbrowser
 import pyautogui

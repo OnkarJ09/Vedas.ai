@@ -1,11 +1,6 @@
-from project.test.test_features.test_config import apikey
+from vedascli.plugins.config import apikey
+from vedascli.plugins.audio import say
 import openai
-import pytest
-
-
-@pytest.fixture(autouse=True)
-def query():
-    return "Vedas_ai"
 
 
 class NoResponseException(Exception):
@@ -13,7 +8,7 @@ class NoResponseException(Exception):
 
 
 chatStr = ""
-def test_chat(query):
+def chat(query):
     global chatStr
     print(chatStr)
     openai.api_key = apikey

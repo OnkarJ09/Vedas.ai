@@ -1,4 +1,4 @@
-from project.features.audio import say
+from vedascli.plugins.audio import say
 import wikipedia
 
 

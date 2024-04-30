@@ -1,6 +1,6 @@
 import pytest
 
-from project.test.test_features.test_config import apikey
+from vedascli.test.test_features.test_config import apikey
 import openai
 import os
 

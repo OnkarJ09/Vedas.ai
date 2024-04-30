@@ -12,5 +12,5 @@ def appopener_close(inp):
 
 
 def appopener_list():
-    mklist(name='app_data.json')
+    mklist(name='vedascli/data/app_data.json')
     give_appnames()

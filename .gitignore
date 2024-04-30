@@ -17,11 +17,11 @@ test/Openai/*.txt
 test/test_features/Openai/*.txt
 
 # For Excluding temporary files of my own use
-bin/temp/scrap
+custom/temp/scrap
 
 # For gtts voice data
 *\output.mp3
 
 # For test
-bin/temp/lid.176.bin
-bin/temp/lid.176.ftz
+custom/temp/lid.176.bin
+custom/temp/lid.176.ftz

@@ -5,4 +5,4 @@ import playsound
 def say(audio, lang='hi'):
     tts = gTTS(text=audio, lang=lang, slow=False)
     tts.save("output.mp3")
-    playsound.playsound("output.mp3")
+    playsound.playsound("vedascli/data/output.mp3")

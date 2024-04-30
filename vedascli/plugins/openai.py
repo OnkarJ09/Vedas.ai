@@ -1,4 +1,4 @@
-from project.features.config import apikey
+from vedascli.plugins.config import apikey
 import openai
 import os
 
