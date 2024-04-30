@@ -19,10 +19,10 @@ def test_chat(query):
     openai.api_key = apikey
     chatStr += f"You: {query}\n Vedas_ai: "
     response = openai.Completion.create(
-        model="text-davinci-003",
+        model="gpt-3.5-turbo-instruct",
         prompt=chatStr,
-        temperature=0.7,
-        max_tokens=256,
+        temperature=1,
+        max_tokens=16384,
         top_p=1,
         frequency_penalty=0,
         presence_penalty=0
