@@ -1,6 +1,6 @@
 import pytest
 
-from vedascli.test.test_features.test_audio import test_say
+from vedascli.test.test_plugins.test_audio import test_say
 import pywhatkit
 
 
