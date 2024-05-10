@@ -3,6 +3,7 @@ import pywhatkit
 
 
 def yt_vdo_player(query):
+    query = query.replace("play", '')
     pywhatkit.playonyt(query)
     say(f"Playing {query}")
-    # return f'{query}'
+    print(f"Playing {query}")

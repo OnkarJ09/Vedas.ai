@@ -12,13 +12,11 @@ import langid
 from textblob import TextBlob
 from langdetect import detect
 import fasttext
+import vlc
 
 
-# def detect_lang(text):
-#     model = fasttext.load_model('lid.176.ftz')
-#     lang = model.predict(text, k=1)[0]
-#     return str(lang[0].replace("__label__", ""))
 lang_codec = recognizer_lang_ids()
+english_lang_code = "en"
 
 
 def take_command():
@@ -46,10 +44,7 @@ def take_command():
     return 'None'
 
 
-take_command()
-
-
-def translate_text(text, target_language=lang_codec):
+def translate_text(text, target_language):
     url = f"https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl={target_language}&dt=t&q={text}"
     response = requests.get(url)
     translation = response.json()[0][0][0]
@@ -58,15 +53,23 @@ def translate_text(text, target_language=lang_codec):
 
 def say(audio, lang=lang_codec):
     tts = gTTS(text=audio, lang=lang, slow=False)
-    file_path = "output.mp3"
-    tts.save(file_path)
-    playsound.playsound(file_path)
+    tts.save("temp.mp3")
+    os.system("mpg123 temp.mp3")
+    os.remove("temp.mp3")
 
 
-translations = translate_text("नमस्ते")
+take_cmd = take_command()
+print(take_cmd)
+say(f"{take_cmd}",  lang_codec)
+translation = str(translate_text(take_cmd, english_lang_code))
+print(f"{translation}")
+translations = str(translate_text(take_cmd, lang_codec))
+print(f"{translations}")
+say(f"{translations}",  lang_codec)
+# translations = translate_text("नमस्ते")
 # again_trans = translate_text(translations, "hi")
-say(translations)
-print(translations)
+# say(translations)
+# print(translations)
 # print(detect_lang())
 # say(detect_lang("olá, como vai você irmão, ram ram"))
 

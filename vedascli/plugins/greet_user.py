@@ -2,7 +2,7 @@ from vedascli.plugins.audio import say
 import datetime
 
 
-def greetuser():
+def greet_user():
     hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour < 12:
         say("Good morning")

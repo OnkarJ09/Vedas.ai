@@ -1,8 +1,23 @@
 from gtts import gTTS
-import playsound
+import os
 
 
-def say(audio, lang='hi'):
-    tts = gTTS(text=audio, lang=lang, slow=False)
-    tts.save("output.mp3")
-    playsound.playsound("vedascli/data/output.mp3")
+def say(text, language):
+    """
+    Convert text to speech and save it as an audio file.
+
+    Parameters:
+        text (str): The text to be spoken.
+        language (str): The ISO 639-1 language code for the desired language.
+    """
+    # Create gTTS object with the specified language
+    tts = gTTS(text, lang=language, slow=False)
+
+    # Save the speech as a temporary audio file
+    tts.save("temp.mp3")
+
+    # Play the audio file
+    os.system("mpg123 temp.mp3")  # You can use any audio player you prefer
+
+    # Delete the temporary audio file
+    os.remove("temp.mp3")

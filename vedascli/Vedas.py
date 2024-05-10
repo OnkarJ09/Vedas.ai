@@ -1,6 +1,6 @@
 from vedascli.plugins import date_time, greet_user, weather, openai, wikipedia, youtube_video_player
-from vedascli.plugins import websearch, ai_chat, translator
-from vedascli.plugins.appopener import appopener_open, appopener_close, appopener_list
+from vedascli.plugins import web_search, ai_chat, translator
+from vedascli.plugins.app_opener import appopener_open, appopener_close, appopener_list
 from vedascli.plugins.audio import say
 import speech_recognition as sr
 import webbrowser
@@ -83,7 +83,7 @@ class Vedas:
                 ######################     Search Engine     #######################
                 elif "search for" in query:
                     querys = query.replace("search for", '')
-                    websearch.search_and_open(querys)
+                    web_search.search_and_open(querys)
                     search_url = f"https://www.google.com/search?={querys}"
                     webbrowser.open(search_url)
                     say(f"ok, searching for {querys}")
