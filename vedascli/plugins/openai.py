@@ -1,4 +1,4 @@
-from vedascli.plugins.config import apikey
+from vedascli.data.config import apikey
 import openai
 import os
 

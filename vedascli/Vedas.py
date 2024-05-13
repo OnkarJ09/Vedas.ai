@@ -36,7 +36,7 @@ def take_command():
 class Vedas:
     @staticmethod
     def virtual_assistant():
-        greet_user.greetuser()
+        greetuser_plugin.greetuser()
         print("I am Vedas ai your personal virtual assistant")
         say("I am Vedas ai your personal virtual assistant")
         print("How can I help you?")
@@ -48,16 +48,16 @@ class Vedas:
 
                 ########################    Greet-User     #######################
                 if "good morning" in query:
-                    greet_user.greetuser()
+                    greetuser_plugin.greetuser()
 
                 elif "good afternoon" in query:
-                    greet_user.greetuser()
+                    greetuser_plugin.greetuser()
 
                 elif "good evening" in query:
-                    greet_user.greetuser()
+                    greetuser_plugin.greetuser()
 
                 elif "good night" in query:
-                    greet_user.greetuser()
+                    greetuser_plugin.greetuser()
 
                 ########################    Date, Time, day, month, year   #######################
                 elif "date" in query:

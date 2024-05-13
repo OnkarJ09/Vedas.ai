@@ -20,13 +20,16 @@ def web_site_open(query):
                  ["online python packages", 'https://pypi.org'],
                  ["chat g p t", 'https://chat.openai.com']]
 
-        # if query == site[0]:
         for site in sites:
             if f"open {site[0]}" in query:
                 say(f"opening {site[0]}")
                 webbrowser.open(site[1])
-            # else:
-            #     search_and_open(query)
+                if query:
+                    handled = True
+                    break
+        if not handled:
+            if query:
+                search_and_open(query)
 
     except Exception as e:
         print(e)

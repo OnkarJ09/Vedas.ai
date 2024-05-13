@@ -1,5 +1,6 @@
-from vedascli.plugins.config import apikey
+from vedascli.data.config import apikey
 from vedascli.plugins.audio import say
+from vedascli.utilities.lang_ids_for_recognizer import recognizer_lang_ids
 import openai
 
 
@@ -23,10 +24,11 @@ def chat(query):
         presence_penalty=0
     )
     try:
-        say(response["choices"][0]["text"])
+        say(response["choices"][0]["text"],  str(recognizer_lang_ids))
         chatStr += f"{response['choices'][0]['text']}\n"
         return response["choices"][0]["text"]
     except NoResponseException:
+        say("try again", str(recognizer_lang_ids()))
         print("Try Again...")
         raise NoResponseException("No response from AI...")
 

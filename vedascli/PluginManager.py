@@ -127,9 +127,9 @@ class PluginManager:
         """
         List loaded plugins.
         """
-
+        print("Loaded plugins:")
         for plugin_name in self.plugins:
-            return plugin_name
+            print(plugin_name)
 
     def check_dependencies(self, plugin_name):
         """
@@ -208,21 +208,3 @@ class PluginManager:
         Get the number of loaded plugins.
         """
         return len(self.plugins)
-
-
-
-if __name__ == "__main__":
-    plugin_manager = PluginManager()
-    plugin_manager.add_directory("scrap")
-    plugin_manager.load_plugins()
-    plugin_manager.list_plugins()
-
-    while True:
-        query = input("Enter your query: ").strip().lower()
-
-        if query == "list plugins":
-            plugin_manager.list_plugins()
-        elif query == "exit":
-            sys.exit(0)
-        else:
-            plugin_manager.execute_plugin(query)
