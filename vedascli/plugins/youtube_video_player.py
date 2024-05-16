@@ -1,8 +1,8 @@
-from vedascli.plugins.audio import Plugin
+from vedascli.plugins.audio import Vedas
 import pywhatkit
 
 
-class Plugin:
+class Vedas:
     def __init__(self):
         pass
 
@@ -21,5 +21,5 @@ class Plugin:
         query = query.replace("play", '')
         query = query.replace("youtube", '')
         pywhatkit.playonyt(query)
-        Plugin.say(f"Playing {query}")
+        Vedas.say(f"Playing {query}")
         print(f"Playing {query}")

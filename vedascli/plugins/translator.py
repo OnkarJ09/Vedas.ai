@@ -1,7 +1,7 @@
 import requests
 
 
-class Plugin:
+class Vedas:
     def __init__(self):
         pass
 

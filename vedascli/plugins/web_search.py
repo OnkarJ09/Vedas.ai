@@ -1,8 +1,8 @@
-from vedascli.plugins.audio import Plugin
+from vedascli.plugins.audio import Vedas
 import webbrowser
 
 
-class Plugin:
+class Vedas:
     def __init__(self):
         pass
 
@@ -22,4 +22,4 @@ class Plugin:
         query = query.replace("search for", '')
         search_url = f"https://www.google.com/search?={query}"
         webbrowser.open(search_url)
-        Plugin.say(f"ok, searching for {query}")
+        Vedas.say(f"ok, searching for {query}")

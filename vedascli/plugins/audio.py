@@ -2,7 +2,7 @@ from gtts import gTTS
 import os
 
 
-class Plugin:
+class Vedas:
     @staticmethod
     def run(self, *args, **kwargs):
         text = kwargs.get("text", '')

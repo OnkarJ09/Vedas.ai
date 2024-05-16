@@ -1,8 +1,8 @@
 from AppOpener import open, close, mklist, give_appnames
-from vedascli.plugins.audio import Plugin
+from vedascli.plugins.audio import Vedas
 
 
-class Plugin:
+class Vedas:
     def match_query(self, query):
         querys = {
             "open": self.app_opener_open,
@@ -20,17 +20,20 @@ class Plugin:
 
     dependencies = ["vedascli/data/app_data.json", "audio"]
 
-    def app_opener_open(self, query):
+    @staticmethod
+    def app_opener_open(query):
         app_name = query.replace("open", '')
-        Plugin.say(f"opening {app_name}")
+        Vedas.say(f"opening {app_name}")
         open(app_name, match_closest=True)
 
-    def app_opener_close(self, query):
+    @staticmethod
+    def app_opener_close(query):
         app_name = query.replace("close", '')
-        Plugin.say(f"closing {app_name}")
+        Vedas.say(f"closing {app_name}")
         close(app_name, match_closest=True, output=False)
 
-    def app_opener_list(self):
+    @staticmethod
+    def app_opener_list():
         mklist(name='vedascli/data/app_data.json')
-        Plugin.say("Here is the list of apps")
+        Vedas.say("Here is the list of apps")
         give_appnames()

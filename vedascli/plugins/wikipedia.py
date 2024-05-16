@@ -1,8 +1,8 @@
-from vedascli.plugins.audio import Plugin
+from vedascli.plugins.audio import Vedas
 import wikipedia
 
 
-class Plugin:
+class Vedas:
     def __init__(self):
         pass
 
@@ -21,6 +21,8 @@ class Plugin:
         if query:
             return self.wiki(query)
 
+    dependencies = ["audio"]
+
     @staticmethod
     def wiki(query):
         """
@@ -28,6 +30,6 @@ class Plugin:
         """
         results = wikipedia.search(query)
         if results:
-            Plugin.say(wikipedia.summary(results, sentences=2))
+            Vedas.say(wikipedia.summary(results, sentences=2))
         else:
             return "No results found."

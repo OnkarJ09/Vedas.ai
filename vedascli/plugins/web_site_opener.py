@@ -1,9 +1,9 @@
-from vedascli.plugins.web_search import Plugin
-from vedascli.plugins.audio import Plugin
+from vedascli.plugins.web_search import Vedas
+from vedascli.plugins.audio import Vedas
 import webbrowser
 
 
-class Plugin:
+class Vedas:
     def __init__(self):
         pass
 
@@ -15,6 +15,8 @@ class Plugin:
         query = self.match_query(kwargs["query"])
         if query:
             self.web_site_open(query)
+
+    dependencies = ["web_search", "audio"]
 
     @staticmethod
     def web_site_open(query):
@@ -36,15 +38,15 @@ class Plugin:
 
             for site in sites:
                 if f"open {site[0]}" in query:
-                    Plugin.say(f"opening {site[0]}")
+                    Vedas.say(f"opening {site[0]}")
                     webbrowser.open(site[1])
                     if query:
                         handled = True
                         break
             if not handled:
                 if query:
-                    Plugin.search_and_open(query)
+                    Vedas.search_and_open(query)
 
         except Exception as e:
             print(e)
-            Plugin.say("sorry, something went wrong. Try again")
+            Vedas.say("sorry, something went wrong. Try again")

@@ -63,8 +63,8 @@ class PluginManager:
             for plugin_dir in self.plugin_dirs:
                 if plugin_dir not in self.blacklisted_dirs:
                     plugin_module = importlib.import_module(f"{plugin_dir}.{plugin_name}")
-                    if hasattr(plugin_module, 'Plugin'):
-                        plugin = plugin_module.Plugin()
+                    if hasattr(plugin_module, 'Vedas'):
+                        plugin = plugin_module.Vedas()
                         dependencies = getattr(plugin, 'dependencies', [])
                         for dependency in dependencies:
                             self.dependencies[plugin_name].append(dependency)

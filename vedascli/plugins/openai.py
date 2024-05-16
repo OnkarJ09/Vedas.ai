@@ -7,7 +7,7 @@ class NoResponse(Exception):
     pass
 
 
-class Plugin:
+class Vedas:
     def __init__(self):
         pass
 
@@ -19,6 +19,8 @@ class Plugin:
         query = self.match_query(kwargs["query"])
         if query:
             return self.ai(query)
+
+    dependencies = ["config"]
 
     def ai(self, prompt):
         openai.api_key = apikey
