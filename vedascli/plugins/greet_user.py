@@ -1,42 +1,33 @@
-from vedascli.plugins.audio import say
+from vedascli.plugins.audio import Plugin
 import datetime
-from vedascli.temp import PluginManager
 
 
-class Plugin(PluginManager):
+class Plugin:
     def matches_query(self, query):
-        return "good" in query.lower()
+        querys = {
+            "morning",
+            "afternoon",
+            "evening",
+            "night",
+        }
+        for q in querys:
+            if q in query:
+                return q.lower()
 
     @staticmethod
     def run(self):
         hour = int(datetime.datetime.now().hour)
-        if hour >= 0 and hour < 12:
-            # say("Good morning")
+        if 0 <= hour < 12:
+            Plugin.say("Good morning")
             print("Good morning")
-        elif hour >= 12 and hour < 17:
-            # say("Good afternoon")
+        elif 12 <= hour < 17:
+            Plugin.say("Good afternoon")
             print("Good afternoon")
-        elif hour >= 17 and hour < 20:
-            # say("Good evening")
+        elif 17 <= hour < 20:
+            Plugin.say("Good evening")
             print("Good evening")
         else:
-            # say("Good night")
+            Plugin.say("Good night")
             print("Good night")
 
-    dependencies = [datetime]
-
-    # @staticmethod
-    # def greet_user():
-    #     hour = int(datetime.datetime.now().hour)
-    #     if hour >= 0 and hour < 12:
-    #         say("Good morning")
-    #         print("Good morning")
-    #     elif hour >= 12 and hour < 17:
-    #         say("Good afternoon")
-    #         print("Good afternoon")
-    #     elif hour >= 17 and hour < 20:
-    #         say("Good evening")
-    #         print("Good evening")
-    #     else:
-    #         say("Good night")
-    #         print("Good night")
+    dependencies = ["audio"]

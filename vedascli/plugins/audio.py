@@ -2,22 +2,25 @@ from gtts import gTTS
 import os
 
 
-def say(text, language):
-    """
-    Convert text to speech and save it as an audio file.
+class Plugin:
+    @staticmethod
+    def run(self, *args, **kwargs):
+        text = kwargs.get("text", '')
+        language = kwargs.get("language", '')
+        if text and language:
+            self.say(text, language)
 
-    Parameters:
-        text (str): The text to be spoken.
-        language (str): The ISO 639-1 language code for the desired language.
-    """
-    # Create gTTS object with the specified language
-    tts = gTTS(text, lang=language, slow=False)
+    @staticmethod
+    def say(text, language):
+        """
+        Convert text to speech and save it as an audio file.
 
-    # Save the speech as a temporary audio file
-    tts.save("temp.mp3")
+        Parameters:
+            text (str): The text to be spoken.
+            language (str): The ISO 639-1 language code for the desired language.
+        """
 
-    # Play the audio file
-    os.system("mpg123 temp.mp3")  # You can use any audio player you prefer
-
-    # Delete the temporary audio file
-    os.remove("temp.mp3")
+        tts = gTTS(text, lang=language, slow=False)
+        tts.save("temp.mp3")
+        os.system("mpg123 temp.mp3")
+        os.remove("temp.mp3")

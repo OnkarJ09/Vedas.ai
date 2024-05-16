@@ -113,13 +113,13 @@ class PluginManager:
         else:
             print(f"Plugin '{plugin_name}' is not loaded.")
 
-    def run_plugin(self, plugin_name):
+    def run_plugin(self, plugin_name, *args, **kwargs):
         """
         Run a loaded plugin.
         """
         if plugin_name in self.plugins:
             # print(f"Running plugin '{plugin_name}'...")
-            self.plugins[plugin_name].run(self)
+            self.plugins[plugin_name].run(*args, **kwargs)
         # else:
         #     print(f"Plugin '{plugin_name}' is not loaded.")
 
