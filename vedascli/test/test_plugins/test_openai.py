@@ -7,14 +7,14 @@ class NoResponse(Exception):
     pass
 
 
-class Vedas:
-    def __init__(self, **kwargs):
+class Test_Vedas:
+    def test___init__(self, **kwargs):
         self.keywords = ["Artificial Intelligence"]
         self.dependencies = []
         self.enabled = True
         self.last_query = None
 
-    def match_query(self, query):
+    def test_match_query(self, query):
         query = query.replace("using", '')
         query = query.replace("artificial", '')
         query = query.replace("intelligence", '')
@@ -22,14 +22,14 @@ class Vedas:
         query_lower = query
         return any(keyword in query_lower for keyword in self.keywords)
 
-    def run(self, *args, **kwargs):
+    def test_run(self, *args, **kwargs):
         if self.last_query:
             query_lower = self.last_query.lower()
-            self.ai(query_lower)
+            self.test_ai(query_lower)
 
-    dependencies = ["config"]
+    dependencies = ["test_config"]
 
-    def ai(self, prompt):
+    def test_ai(self, prompt):
         openai.api_key = Vedas.self.apikey
         text = f"OpenAI response for Prompt: {prompt} \n *************************\n\n"
 

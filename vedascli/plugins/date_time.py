@@ -1,62 +1,75 @@
-from vedascli.plugins.audio import Vedas
+from .audio import say
 import datetime
 
 
 class Vedas:
-    def __init__(self):
-        pass
+    def __init__(self, **kwargs):
+        self.keywords = ["date time", "day", "date", "time", "month", "year"]
+        self.dependencies = []
+        self.enabled = True
+        self.last_query = None
 
-    def match_query(self, query):
-        q = {
-            "date time": self.date_time,
-            "day": self.day,
-            "date": self.date,
-            "time": self.time,
-            "month": self.month,
-            "year": self.year
-        }
-        for i in q[0]:
-            if i in query:
-                return i[1]
+    def matches_query(self, query):
+        self.last_query = query
+        query_lower = query
+        return any(keyword in query_lower for keyword in self.keywords)
 
     def run(self, *args, **kwargs):
-        query = self.match_query(kwargs["query"])
-        return query
+        if self.last_query:
+            query_lower = self.last_query.lower()
+            if "date time" in query_lower:
+                return self.date_time()
+            elif "date" in query_lower:
+                return self.date()
+            elif "time" in query_lower:
+                return self.time()
+            elif "day" in query_lower:
+                return self.day()
+            elif "month" in query_lower:
+                return self.month()
+            elif "year" in query_lower:
+                return self.year()
 
     dependencies = ["audio"]
 
     # It will return the current date and time in the format of "Sunday, 12 March 2023 10:00 AM"
-    @staticmethod
-    def date_time():
-        print(f"now it's {datetime.datetime.now().strftime("%A, %d %B, %Y %I:%M %p")}")
-        Vedas.say(f"now it's {datetime.datetime.now().strftime("%A, %d %B, %Y %I:%M %p")}")
+    def date_time(self):
+        q = datetime.datetime.now().strftime("%A, %d %B, %Y %I:%M %p")
+        print(q)
+        say(q)
+        return q
 
     # It will return the current date in the format of "Sunday, 12 March 2023"
-    @staticmethod
-    def date():
-        print(f"today is {datetime.datetime.now().strftime("%A, %d %B ,%Y")}")
-        Vedas.say(f"today is {datetime.datetime.now().strftime("%A, %d %B ,%Y")}")
+    def date(self):
+        q = datetime.datetime.now().strftime("%A, %d %B, %Y")
+        print(q)
+        say(q)
+        return q
 
     # It will return the current time in the format of "10:00 AM"
-    @staticmethod
-    def time():
-        print(f"it's {datetime.datetime.now().strftime("%I:%M %p")}")
-        Vedas.say(f"it's {datetime.datetime.now().strftime("%I:%M %p")}")
+    def time(self):
+        q = datetime.datetime.now().strftime("%I:%M %p")
+        print(q)
+        say(q)
+        return q
 
     # It will return the current day in the format of "Monday"
-    @staticmethod
-    def day():
-        print(f"it's {datetime.datetime.now().strftime("%A")}")
-        Vedas.say(f"it's {datetime.datetime.now().strftime("%A")}")
+    def day(self):
+        q = datetime.datetime.now().strftime("%A")
+        print(q)
+        say(q)
+        return q
 
     # It will return the current month in the format of "March"
-    @staticmethod
-    def month():
-        print(f"it's {datetime.datetime.now().strftime("%B")}")
-        Vedas.say(f"it's {datetime.datetime.now().strftime("%B")}")
+    def month(self):
+        q = datetime.datetime.now().strftime("%B")
+        print(q)
+        say(q)
+        return q
 
     # It will return the current year in the format of "2019"
-    @staticmethod
-    def year():
-        print(f"it's {datetime.datetime.now().strftime("%Y")}")
-        Vedas.say(f"it's {datetime.datetime.now().strftime("%Y")}")
+    def year(self):
+        q = datetime.datetime.now().strftime("%Y")
+        print(q)
+        say(q)
+        return q

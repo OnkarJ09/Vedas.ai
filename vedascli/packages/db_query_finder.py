@@ -1,7 +1,7 @@
 import pymongo
 
 
-class Vedas:
+class Plugin:
     def __init__(self):
         pass
 

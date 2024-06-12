@@ -1,33 +1,34 @@
-from vedascli.plugins.audio import Vedas
+from .audio import say
 import datetime
 
 
 class Vedas:
-    def matches_query(self, query):
-        querys = {
-            "morning",
-            "afternoon",
-            "evening",
-            "night",
-        }
-        for q in querys:
-            if q in query:
-                return q.lower()
+    def __init__(self, **kwargs):
+        self.keywords = ["morning", "afternoon", "evening", "night"]
+        self.dependencies = []
+        self.enabled = True
+        self.last_query = None
 
-    @staticmethod
-    def run(self):
-        hour = int(datetime.datetime.now().hour)
-        if 0 <= hour < 12:
-            Vedas.say("Good morning")
-            print("Good morning")
-        elif 12 <= hour < 17:
-            Vedas.say("Good afternoon")
-            print("Good afternoon")
-        elif 17 <= hour < 20:
-            Vedas.say("Good evening")
-            print("Good evening")
-        else:
-            Vedas.say("Good night")
-            print("Good night")
+    def matches_query(self, query):
+        self.last_query = query
+        query_lower = query
+        return any(keyword in query_lower for keyword in self.keywords)
+
+    def run(self, *args, **kwargs):
+        if self.last_query:
+            hour = int(datetime.datetime.now().hour)
+            if 0 <= hour < 12:
+                say("Good morning")
+                print("Good morning")
+            elif 12 <= hour < 17:
+                say("Good afternoon")
+                print("Good afternoon")
+            elif 17 <= hour < 20:
+                say("Good evening")
+                print("Good evening")
+            else:
+                say("Good night")
+                print("Good night")
 
     dependencies = ["audio"]
+
