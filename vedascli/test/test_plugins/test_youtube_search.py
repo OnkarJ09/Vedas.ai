@@ -1,11 +1,15 @@
 from .test_audio import test_say
-import pywhatkit
+import webbrowser
+
+
+class Test_Ytvdoplayer(Exception):
+    pass
 
 
 class Test_Vedas:
     # Initial function for self declaration and some variables
     def test___init__(self, **kwargs):
-        self.keywords = ["play on youtube", "play on yt", "play yt", "play youtube"]
+        self.keywords = ["search on youtube", "search on youtube for", "search on yt", "search on yt for"]
         self.dependencies = []
         self.enabled = True
         self.last_query = None
@@ -20,17 +24,22 @@ class Test_Vedas:
     def test_run(self, *args, **kwargs):
         if self.last_query:
             query_lower = str(self.last_query).lower()
-            return self.test_yt_vdo_player(query_lower)
+            return self.test_youtube_video_search(query_lower)
 
     # These are the dependencies that are required to run this function
     dependencies = ["test_audio"]
 
-    def test_yt_vdo_player(self, query):
-        query = query.replace("play on youtube", '')
-        query = query.replace("play on yt", '')
-        query = query.replace("play", '')
+    def test_youtube_video_search(self, query):
+        query = query.replace("search on", '')
+        query = query.replace("youtube for", '')
         query = query.replace("youtube", '')
+        query = query.replace("yt for", '')
         query = query.replace("yt", '')
-        pywhatkit.playonyt(query)
-        test_say(f"Playing {query}")
-        print(f"Playing {query}")
+        query = query.replace("search on youtube for", '')
+        try:
+            url_link = f'https://www.youtube.com/results?search_query={query}'
+            webbrowser.open(url_link)
+            test_say(f"Trying to search {query} on youtube")
+        except Test_Ytvdoplayer:
+            print("Sorry!! Please Try Again")
+            test_say("Sorry!! Please Try Again")
