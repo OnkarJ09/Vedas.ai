@@ -4,6 +4,7 @@ from collections import defaultdict
 import builtins
 import inspect
 
+
 class PluginManager:
     def __init__(self):
         self.plugin_dirs = []
