@@ -1,7 +1,7 @@
 # Vedas.ai
 
 ## Fully Voice Controllable AI Virtual Assistant
-version 0.1
+v1
 
 <b> Vedas.ai </b>
 is a powerful, fully voice controllable AI virtual assistant designed to assist you with various tasks 
