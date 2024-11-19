@@ -143,6 +143,9 @@ languages = {
     "zulu": "zu"
 }
 
+class Vedas:
+    pass
+
 
 async def lang_detector(text):
     model = fasttext.load_model("lid.176.ftz")
