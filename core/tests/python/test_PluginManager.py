@@ -136,6 +136,6 @@ def test_run_plugin(plugin_manager):
 
 def test_find_plugin_for_query(plugin_manager):
     plugin_manager.load_plugins()
-    query = "hello"
+    query = "morning"
     plugin_name = plugin_manager.find_plugin_for_query(query)
     assert plugin_name is not None  # Ensure a plugin is found for the query
