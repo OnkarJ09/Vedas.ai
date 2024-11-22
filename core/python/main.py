@@ -17,9 +17,9 @@ if __name__ == "__main__":
     current_language = "en"
 
     while True:
-        # query, language_changed = take_command(current_language)
-        query = input("Enter your query: ").lower()
-        language_changed = None
+        query, language_changed = take_command(current_language)
+        # query = input("Enter your query: ").lower()
+        # language_changed = None
 
         if query is None:
             continue    # Repeat listening if the command wasn't understood
