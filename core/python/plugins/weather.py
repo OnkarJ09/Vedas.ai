@@ -1,4 +1,3 @@
-from .audio import say
 import requests
 import json
 
@@ -30,7 +29,7 @@ class Vedas:
                         f"The feels like temperature is {feels_like} degrees Celsius.")
 
         print(weather_info)
-        say(weather_info)
+        return weather_info
 
     def matches_query(self, query):
         return 'weather' in query.lower()
