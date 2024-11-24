@@ -7,6 +7,9 @@ class Vedas:
         self.dependencies = []
         self.enabled = True
 
+    def matches_query(self, query):
+        return 'weather' in query.lower()
+
     @staticmethod
     def run():
         city = "Nagpur"
@@ -31,5 +34,3 @@ class Vedas:
         print(weather_info)
         return weather_info
 
-    def matches_query(self, query):
-        return 'weather' in query.lower()

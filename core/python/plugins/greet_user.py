@@ -18,9 +18,13 @@ class Vedas:
             hour = int(datetime.datetime.now().hour)
             if 0 <= hour < 12:
                 print("Good morning")
+                return "Good morning"
             elif 12 <= hour < 17:
                 print("Good afternoon")
+                return "Good afternoon"
             elif 17 <= hour < 20:
                 print("Good evening")
+                return "Good evening"
             else:
                 print("Good night")
+                return "Good night"

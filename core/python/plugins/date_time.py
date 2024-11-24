@@ -29,7 +29,6 @@ class Vedas:
             elif "year" in query_lower:
                 return self.year()
 
-    # dependencies = ["audio"]
 
     # It will return the current date and time in the format of "Sunday, 12 March 2023 10:00 AM"
     def date_time(self):

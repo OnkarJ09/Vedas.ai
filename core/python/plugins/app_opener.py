@@ -24,7 +24,6 @@ class Vedas:
             elif "list" in query_lower:
                 return self.app_opener_list()
 
-    dependencies = ["audio"]
 
     def app_opener_open(self, query):
         app_name = query.replace("open", '').strip()
