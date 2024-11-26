@@ -1,5 +1,5 @@
 from task_manager.PluginManager import PluginManager
-from plugins.audio import take_command
+from core.python.utilities.audio import take_command
 import sys
 
 
