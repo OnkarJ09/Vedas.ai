@@ -13,3 +13,6 @@ temp/*
 
 # For gtts voice data
 *\output.mp3
+
+# for env variable
+*\.env

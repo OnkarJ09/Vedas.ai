@@ -1,0 +1,23 @@
+{
+  "intents": [
+    {
+      "name": "greet",
+      "examples": [
+        "good morning",
+        "good afternoon",
+        "good evening",
+        "morning",
+        "afternoon",
+        "evening"
+        ]
+    },
+    {
+    "name": "weather",
+    "examples": [
+      "what is the weather today",
+      "what is the weather like",
+      "what is the weather"
+    ]
+    }
+  ]
+}
