@@ -1,10 +1,14 @@
 {
   "entities": {
     "greet": [
-      "morning|afternoon|evening"
+      "good morning",
+      "good afternoon",
+      "good evening"
     ],
     "weather": [
-      "today|tomorrow|yesterday"
+      "today",
+      "tomorrow",
+      "yesterday"
     ],
     "time": [
       "\\b\\d{1,2}:\\d{2}\\s*[APMapm]{2}\\b",
