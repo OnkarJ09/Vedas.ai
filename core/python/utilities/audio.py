@@ -4,6 +4,7 @@ from gtts import gTTS
 import requests
 import asyncio
 import fasttext
+import pygame
 import os
 
 # These are the languages and there respective codes accepted universally
