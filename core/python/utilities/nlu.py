@@ -1,14 +1,13 @@
 from groq import Groq
 import json
-import os
 import re
-
+import os
 
 
 # Load intents and patterns from JSON files
 def load_intents():
     """Load intents from a JSON file and flatten the structure."""
-    with open("../data/intent.json", 'r') as file:
+    with open("../python/data/intent.json", 'r') as file:
         intents_data = json.load(file)
 
     # Flatten the intents into a list of examples with corresponding intent names
@@ -21,7 +20,7 @@ def load_intents():
 
 def load_patterns():
     """Load patterns from a JSON file."""
-    with open("../data/entity.json", 'r') as file:
+    with open("../python/data/entity.json", 'r') as file:
         pattern_data = json.load(file)
     # print(pattern_data)
     return pattern_data['entities']
@@ -37,7 +36,7 @@ def preprocess(text):
 def match_query(text):
     intent = load_intents()
     pattern = load_patterns()
-    with open("../data/.env") as f:
+    with open("../python/data/.env") as f:
         read = f.read().replace("GROQ_API_KEY=", '')
 
     os.environ["GROQ_API_KEY"] = str(read)
@@ -50,24 +49,28 @@ def match_query(text):
         messages=[
             {
                 "role": "system",
-                "content": f"use the below lists and get the intent and entity from the query/text given by the user only in form Intent: intent_name Entity: entity_name give all the intent and entities that match and if it does not match any then just answer the user query in general as per yours knowledge{intent}{pattern}"
+                "content": f"use the below lists and get the intent and entity from the query/text given by the user. "
+                           f"Only and only in form Intent: intent_name Entity: entity_name give all the intent and "
+                           f"entities that matches and if it does not match any then just answer None. "
+                           f"{intent}{pattern}"
             },
             {
                 "role": "user",
-                "content": f"{text}",
+                "content": f"{preprocess(text)}",
             }
         ],
         model="llama3-8b-8192",
-        stream=True,
+        stream=False,
     )
 
-    for chunk in stream:
-        print(chunk.choices[0].delta.content, end="")
+    with open("../python/data/recognized.json", 'w') as file:
+        json.dump(str(stream.choices[0].message.content), file)
 
 
 # Main execution
-if __name__ == "__main__":
-    # Load intents and patterns
-    # Example query
-    query = "Good morning, what is the weather like today?"
-    match_query(query)
+# if __name__ == "__main__":
+#     # Load intents and patterns
+#     # Example query
+#     query = "Good morning, what is the weather like today?"
+#     r = match_query(query)
+#     print(r)

@@ -16,3 +16,6 @@ temp/*
 
 # for env variable
 *\.env
+
+# to exclude temp data
+*\recognized.json

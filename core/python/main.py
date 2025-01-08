@@ -1,6 +1,9 @@
 from task_manager.PluginManager import PluginManager
 from core.python.utilities.audio import take_command
+from utilities.nlu import match_query
+import json
 import sys
+import re
 
 
 if __name__ == "__main__":
@@ -17,9 +20,9 @@ if __name__ == "__main__":
     current_language = "en"
 
     while True:
-        query, language_changed = take_command(current_language)
-        # query = input("Enter your query: ").lower()
-        # language_changed = None
+        # query, language_changed = take_command(current_language)
+        query = input("Enter your query: ").lower()
+        language_changed = None
 
         if query is None:
             continue    # Repeat listening if the command wasn't understood
@@ -31,4 +34,16 @@ if __name__ == "__main__":
         if query == "exit":
             sys.exit(0)
         else:
-            plugin_manager.execute_plugin(query)
+            # plugin_manager.execute_plugin(query)
+            match_query(query)
+            with open("../python/data/recognized.json") as f:
+                recognized = json.load(f)
+
+            intents = []
+            entities = []
+            for data in recognized:
+                if data == 'Intent':
+                    intents.append(data)
+                elif data == 'Entity':
+                    entities.append(data)
+
