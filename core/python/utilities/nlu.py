@@ -15,34 +15,37 @@ def load_intents():
     for intent in intents_data['intents']:
         for example in intent['examples']:
             intents_list.append((example, intent['name']))  # Store tuple of (example, intent name)
-    # print(intents_list)
+    file.close()
     return intents_list
+
 
 def load_patterns():
     """Load patterns from a JSON file."""
+    # with open("../python/data/entity.json", 'r') as file:
     with open("../python/data/entity.json", 'r') as file:
         pattern_data = json.load(file)
-    # print(pattern_data)
+    file.close()
     return pattern_data['entities']
+
 
 # Preprocess the raw text data from user
 def preprocess(text):
     text = text.lower()
     text = re.sub(r"[^a-zA-Z0-9 ]", " ", text)  # Allow spaces
-    # print(text.strip())
     return text.strip()
+
 
 # Will match and extract the intent and entity from the user query
 def match_query(text):
     intent = load_intents()
     pattern = load_patterns()
-    with open("../python/data/.env") as f:
-        read = f.read().replace("GROQ_API_KEY=", '')
+    with open("../python/data/.env", 'r') as f:
+        api = f.read().replace("GROQ_API_KEY=",'')
 
-    os.environ["GROQ_API_KEY"] = str(read)
+    os.environ['GROQ_API_KEY'] = str(api)
 
     client = Groq(
-        api_key=os.environ.get("GROQ_API_KEY"),
+        api_key=os.environ['GROQ_API_KEY'],
     )
 
     stream = client.chat.completions.create(
@@ -50,8 +53,9 @@ def match_query(text):
             {
                 "role": "system",
                 "content": f"use the below lists and get the intent and entity from the query/text given by the user. "
-                           f"Only and only in form Intent: intent_name Entity: entity_name give all the intent and "
-                           f"entities that matches and if it does not match any then just answer None. "
+                           f"Only and only in form Intent: intent_name Entity: entity_name, give all the intent and "
+                           f"entities that matches with the user given text and if it does not match any then just "
+                           f"answer None. "
                            f"{intent}{pattern}"
             },
             {
@@ -63,14 +67,22 @@ def match_query(text):
         stream=False,
     )
 
-    with open("../python/data/recognized.json", 'w') as file:
-        json.dump(str(stream.choices[0].message.content), file)
+    return str(stream.choices[0].message.content)
 
 
-# Main execution
+# # Main execution
 # if __name__ == "__main__":
-#     # Load intents and patterns
 #     # Example query
-#     query = "Good morning, what is the weather like today?"
+#     query = "good morning, what is the weather? in india"
 #     r = match_query(query)
-#     print(r)
+#     # print(r)
+#
+#     # Find all intent-entity pairs
+#     matches = re.findall(r"Intent:\s*(\w+)\s*Entity:\s*(\w+)", r)
+#
+#     # Extract and print results
+#     res = {}
+#     for intent, entity in matches:
+#         # print(f"{intent} {entity}")
+#         res[intent] = entity
+#         print(res)

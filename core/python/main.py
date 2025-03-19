@@ -20,9 +20,9 @@ if __name__ == "__main__":
     current_language = "en"
 
     while True:
-        # query, language_changed = take_command(current_language)
-        query = input("Enter your query: ").lower()
-        language_changed = None
+        query, language_changed = take_command(current_language)
+        # query = input("Enter your query: ").lower()
+        # language_changed = None
 
         if query is None:
             continue    # Repeat listening if the command wasn't understood
@@ -34,16 +34,15 @@ if __name__ == "__main__":
         if query == "exit":
             sys.exit(0)
         else:
-            # plugin_manager.execute_plugin(query)
-            match_query(query)
-            with open("../python/data/recognized.json") as f:
-                recognized = json.load(f)
+            query = match_query(query)
 
-            intents = []
-            entities = []
-            for data in recognized:
-                if data == 'Intent':
-                    intents.append(data)
-                elif data == 'Entity':
-                    entities.append(data)
+            # Find all intent-entity pairs
+            matches = re.findall(r"Intent:\s*(\w+)\s*Entity:\s*(\w+)", query)
+
+            # Extract and print results
+            res = {}
+            for intent, entity in matches:
+                print(f"{intent} {entity}")
+                res[intent] = entity
+                print(res)
 
