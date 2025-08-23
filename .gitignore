@@ -1,2 +1,8 @@
 # For ignoring the PyCharm cache file
 /.idea/*
+
+# For temperary data
+ideas/*
+
+# For environment variables
+.env
