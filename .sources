@@ -1,0 +1,3 @@
+DEFAULT_LANGUAGE=your default language that you want to use for the assistant
+GOOGLE_API_KEY=your_api_key
+DEFAULT_MODEL=model name here

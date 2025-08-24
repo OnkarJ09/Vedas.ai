@@ -1,7 +1,7 @@
 from plugins.audio import take_command
 from dotenv import load_dotenv
-import sys
 import os, re
+import sys
 
 
 # Load environment variables from .env file
@@ -13,10 +13,11 @@ if __name__ == '__main__':
     current_language = os.getenv('DEFAULT_LANGUAGE')
 
     while True:
-        """For texting process"""
+        # For speech input
         query, language_changed = take_command(current_language)
 
 
+        """For testing process"""
         # query = input("Enter your query: ").lower()
         # language_changed = None
 
