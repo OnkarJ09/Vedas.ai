@@ -6,3 +6,6 @@ ideas/*
 
 # For environment variables
 .env
+
+# For virtual environment
+.venv/*
