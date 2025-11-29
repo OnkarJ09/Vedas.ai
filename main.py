@@ -1,48 +1,86 @@
-from plugins.audio import take_command
-from dotenv import load_dotenv
-import os, re
-import sys
+import logging
+from datetime import datetime
+
+# basic logger setup
+logging.basicConfig(
+    filename="vedas.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
-# Load environment variables from .env file
-load_dotenv()
 
+class VedasAssistant:
+    def __init__(self, user_name):
+        self.user_name = user_name
+        self.is_running = True
 
-if __name__ == '__main__':
-    # Default language is english
-    current_language = os.getenv('DEFAULT_LANGUAGE')
+        # map simple commands to methods
+        self.commands = {
+            "hello": self.cmd_hello,
+            "time": self.cmd_time,
+            "help": self.cmd_help,
+            "exit": self.cmd_exit,
+        }
 
-    while True:
-        # For speech input
-        query, language_changed = take_command(current_language)
+    def handle(self, text):
+        """
+        Main entry: takes user text, decides what to do.
+        """
+        text = text.strip().lower()
 
+        # optional "hey vedas" hotword
+        if text.startswith("hey vedas"):
+            text = text.replace("hey vedas", "", 1).strip()
 
-        """For testing process"""
-        # query = input("Enter your query: ").lower()
-        # language_changed = None
+        if not text:
+            return "Say something like 'hello', 'time', or 'help'."
 
-        if query is None:
-            continue    # Repeat listening if the command wasn't understood
-
-        if language_changed:
-            current_language = query
-            continue    # Skip further processing and start listening in new language
-
-        if query == "exit":
-            sys.exit(0)
+        # pick command
+        func = self.commands.get(text)
+        if func:
+            logging.info(f"Command received: {text}")
+            return func()
         else:
-            """
-            Here there will be the logic for the MCP Manager integration.
-            """
-            pass
-            # query = match_query(query)
-            #
-            # # Find all intent-entity pairs
-            # matches = re.findall(r"Intent:\s*(\w+)\s*Entity:\s*(\w+)", query)
-            #
-            # # Extract and print results
-            # res = {}
-            # for intent, entity in matches:
-            #     print(f"{intent} {entity}")
-            #     res[intent] = entity
-            #     print(res)
+            logging.warning(f"Unknown command: {text}")
+            return "I didn't get that yet. Type 'help' to see options."
+
+    # ------------- command methods -------------
+
+    def cmd_hello(self):
+        # TODO: return a hybrid-style greeting
+        return f"Hey {self.user_name}! VEDAS online. Ready when you are. 😎"
+
+    def cmd_time(self):
+        # TODO: return current time nicely formatted
+        now = datetime.now().strftime("%H:%M:%S")
+        return f"Current time is {now}."
+
+    def cmd_help(self):
+        # TODO: show basic commands
+        return (
+            "Commands you can try:\n"
+            "- hello : Greet\n"
+            "- time  : Show current time\n"
+            "- help  : Show this help\n"
+            "- exit  : Quit VEDAS\n"
+            "You can also start with 'Hey Vedas ...'"
+        )
+
+    def cmd_exit(self):
+        self.is_running = False
+        return "Shutting down. See you soon 👋"
+
+
+
+if __name__ == "__main__":
+    user_name = "Onkar"  # or input("Enter your name: ")
+
+    vedas = VedasAssistant(user_name)
+    print(f"Hello {user_name}, VEDAS online. Type 'help' to begin.\n")
+
+    while vedas.is_running:
+        user_input = input("You: ")
+        reply = vedas.handle(user_input)
+        print(f"VEDAS: {reply}")
+

@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "add_numbers": {
-      "command": "python",
-      "args": ["../servers/add_num.py"]
-    }
-  }
-}

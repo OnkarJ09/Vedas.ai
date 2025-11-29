@@ -1,11 +1,8 @@
-# For ignoring the PyCharm cache file
-/.idea/*
+# pycharm cache
+.idea/*
 
-# For temperary data
-ideas/*
+# Logs
+vedas.log
 
-# For environment variables
-.env
-
-# For virtual environment
+# Virtual environment
 .venv/*
