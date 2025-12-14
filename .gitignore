@@ -6,3 +6,6 @@ vedas.log
 
 # Virtual environment
 .venv/*
+
+# Environment vaiables
+.env
