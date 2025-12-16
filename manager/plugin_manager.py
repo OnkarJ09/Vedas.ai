@@ -86,9 +86,10 @@ class PluginManager:
         plugin_name = self.find_plugin_for_query(query)
         if plugin_name:
             print(f"Executing plugin '{plugin_name}' for query: {query}")
-            self.run_plugin(plugin_name, *args, **kwargs)
+            return self.run_plugin(plugin_name, *args, **kwargs)
         else:
             print("No suitable plugin found for the query.")
+            return None
 
     def reload_plugin(self, plugin_name):
         if plugin_name in self.plugins:
@@ -100,9 +101,10 @@ class PluginManager:
     def run_plugin(self, plugin_name, *args, **kwargs):
         if plugin_name in self.plugins:
             print(f"Running plugin '{plugin_name}'...")
-            self.plugins[plugin_name].run(*args, **kwargs)
+            return self.plugins[plugin_name].run(*args, **kwargs)
         else:
             print(f"Plugin '{plugin_name}' is not loaded.")
+            return None
 
     def list_plugins(self):
         print("Loaded plugins:")

@@ -1,6 +1,6 @@
-from skills.greet_user_acc_time import get_time_based_greeting
+from utils.greet_user_acc_time import get_time_based_greeting
 from manager.plugin_manager import PluginManager
-import logging, os
+import logging
 import tomllib
 
 
@@ -53,8 +53,9 @@ if __name__ == "__main__":
             pass
 
         else:
-            plugin_manager.execute_plugin(query)
-            logger.info(f"VEDAS -> ")
+            result = plugin_manager.execute_plugin(query)
+            print(result)
+            logger.info(f"VEDAS -> {result}")
 
 
 

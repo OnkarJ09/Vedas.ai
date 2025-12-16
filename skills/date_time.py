@@ -1,34 +1,61 @@
 import datetime
 
-def date_time(query):
-    query = query.lower()
 
-    if "date" in query and "time" in query:
-        return datetime.datetime.strftime(datetime.datetime.now(),"%A %b %d %Y %I:%M %p")
+class Vedas:
+    def __init__(self, **kwargs):
+        self.keywords = ["date time", "day", "date", "time", "month", "year"]
+        self.dependencies = []
+        self.enabled = True
+        self.last_query = None
 
-    elif "date" in query:
-        return datetime.datetime.strftime(datetime.datetime.now(),"%A %b %d %Y")
+    def matches_query(self, query):
+        self.last_query = query
+        query_lower = query
+        return any(keyword in query_lower for keyword in self.keywords)
 
-    elif "time" in query:
-        return datetime.datetime.strftime(datetime.datetime.now(),"%H:%M:%S")
+    def run(self, *args, **kwargs):
+        if self.last_query:
+            query_lower = self.last_query.lower()
+            if "date" in query_lower and "time" in query_lower:
+                return self.date_time()
+            elif "date" in query_lower:
+                return self.date()
+            elif "time" in query_lower:
+                return self.time()
+            elif "day" in query_lower:
+                return self.day()
+            elif "month" in query_lower:
+                return self.month()
+            elif "year" in query_lower:
+                return self.year()
 
-    elif "day" in query:
-        return datetime.datetime.strftime(datetime.datetime.now(),"%d")
 
-    elif "month" in query:
-        return datetime.datetime.strftime(datetime.datetime.now(),"%B")
+    # It will return the current date and time in the format of "Sunday, 12 March 2023 10:00 AM"
+    def date_time(self):
+        q = datetime.datetime.now().strftime("%A, %d %B, %Y %I:%M %p")
+        return q
 
-    elif "year" in query:
-        return datetime.datetime.strftime(datetime.datetime.now(),"%Y")
+    # It will return the current date in the format of "Sunday, 12 March 2023"
+    def date(self):
+        q = datetime.datetime.now().strftime("%A, %d %B, %Y")
+        return q
 
-    else:
-        return None
+    # It will return the current time in the format of "10:00 AM"
+    def time(self):
+        q = datetime.datetime.now().strftime("%I:%M %p")
+        return q
 
+    # It will return the current day in the format of "Monday"
+    def day(self):
+        q = datetime.datetime.now().strftime("%A")
+        return q
 
-if __name__ == "__main__":
-    print(date_time("date"))
-    print(date_time("time"))
-    print(date_time("day"))
-    print(date_time("month"))
-    print(date_time("year"))
-    print(date_time("date time"))
+    # It will return the current month in the format of "March"
+    def month(self):
+        q = datetime.datetime.now().strftime("%B")
+        return q
+
+    # It will return the current year in the format of "2019"
+    def year(self):
+        q = datetime.datetime.now().strftime("%Y")
+        return q
