@@ -8,4 +8,7 @@ vedas.log
 .venv/*
 
 # Environment vaiables
-.env
+config.toml
+
+# For PyCache
+*/__pycache__/*

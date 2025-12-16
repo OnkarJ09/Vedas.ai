@@ -39,5 +39,5 @@ def get_time_based_greeting():
     return random.choice(time_based_greetings[period])
 
 
-if __name__ == "__main__":
-    print(get_time_based_greeting())
+# if __name__ == "__main__":
+#     print(get_time_based_greeting())

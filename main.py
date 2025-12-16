@@ -1,11 +1,14 @@
 from skills.greet_user_acc_time import get_time_based_greeting
 from manager.plugin_manager import PluginManager
-from dotenv import load_dotenv
 import logging, os
+import tomllib
 
 
-# ----------------  INITIALIZE DOTENV   -------------- #
-load_dotenv()
+# ----------------  INITIALIZE ENVIRONMENT VARIABLE   -------------- #
+with open("utils/config.toml", "rb") as f:
+    env_var = tomllib.load(f)
+
+
 
 # ---------------- LOGGER SETUP ---------------- #
 logger = logging.getLogger("VEDAS")
@@ -30,8 +33,9 @@ if __name__ == "__main__":
     plugin_manager.load_plugins()
 
     # greet user
-    get_time_based_greeting()
-    logger.info(f"Greeting with new session {get_time_based_greeting()}")
+    greet = get_time_based_greeting() + f" {env_var['username']}"
+    print(greet)
+    logger.info(f"Greeting with new session {env_var['username']}")
 
     while True:
         query = input("User -> ").lower()
