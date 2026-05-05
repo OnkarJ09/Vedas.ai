@@ -3,3 +3,6 @@
 
 #Virtual environment
 .venv/*
+
+#For scratch ideas files
+ideas/*
