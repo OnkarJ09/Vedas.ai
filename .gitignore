@@ -6,3 +6,6 @@
 
 #For scratch ideas files
 ideas/*
+
+# For the environment variables
+runtime/*.env
