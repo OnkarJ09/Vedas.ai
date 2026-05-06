@@ -1,3 +1,4 @@
+from manager.env_manager import DEFAULT_USER
 import datetime
 import dotenv
 import random
@@ -60,11 +61,11 @@ class Vedas:
 
         if clean_query in ["hi", "hello", "hey", "heyy", "hii"]:
             # return "hello, USER"
-            return f"{dotenv.get_key(".env", "USER")} {self.greet()} {random.choice(self.greetings)}"
+            return f"{DEFAULT_USER} {self.greet()} {random.choice(self.greetings)}"
 
         if any(clean_query.startswith(k + " ") for k in ["hi", "hello", "hey", "heyy", "hii"]):
             # return "hello, USER"
-            return f"{dotenv.get_key(".env", "USER")} {self.greet()} {random.choice(self.greetings)}"
+            return f"{DEFAULT_USER} {self.greet()} {random.choice(self.greetings)}"
 
         return None
 

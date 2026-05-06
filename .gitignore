@@ -9,3 +9,9 @@ ideas/*
 
 # For the environment variables
 runtime/*.env
+
+#Cache files
+__pycache__/*
+*.pyc
+*/__pycache__/*
+*/*.pyc

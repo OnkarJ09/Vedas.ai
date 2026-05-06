@@ -1,7 +1,9 @@
 from utlis.text_normalizer import normalize_text
 from collections import defaultdict
 from utlis.state import AgentState
+from manager.env_manager import OPENAI_API_KEY
 from openai import OpenAI
+from pathlib import Path
 import importlib
 import builtins
 import inspect
@@ -9,9 +11,10 @@ import dotenv
 import os, re
 import json
 
+
 client = OpenAI(
     base_url="https://integrate.api.nvidia.com/v1",
-    api_key=dotenv.get_key(".env", "OPENAI")
+    api_key=OPENAI_API_KEY,
 )
 
 
@@ -504,7 +507,7 @@ if __name__ == "__main__":
     plugin_manager = PluginManager()
 
     # Add plugin directories
-    plugin_manager.add_directory('servers')
+    plugin_manager.add_directory('plugins')
 
     # Load all plugins from the specified directories
     plugin_manager.load_plugins()
