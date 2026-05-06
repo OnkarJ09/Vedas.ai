@@ -1,6 +1,5 @@
 from manager.env_manager import DEFAULT_USER
 import datetime
-import dotenv
 import random
 
 
