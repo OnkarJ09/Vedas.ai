@@ -96,22 +96,6 @@ class PluginManager:
         else:
             print(f"Plugin '{plugin_name}' is not loaded.")
 
-    def execute_plugin(self, query, *args, **kwargs):
-        plugin_name = self.find_plugin_for_query(query)
-        if plugin_name:
-            print(f"Executing plugin '{plugin_name}' for query: {query}")
-            return self.run_plugin(plugin_name, *args, **kwargs)
-        else:
-            print("No suitable plugin found for the query.")
-            return None
-
-    def reload_plugin(self, plugin_name):
-        if plugin_name in self.plugins:
-            self.unload_plugin(plugin_name)
-            self.load_plugin(plugin_name)
-        else:
-            print(f"Plugin '{plugin_name}' is not loaded.")
-
     def run_plugin(self, plugin_name, state, args=None, **kwargs):
         if plugin_name in self.plugins:
             plugin = self.plugins[plugin_name]
@@ -457,6 +441,26 @@ class PluginManager:
             if hasattr(plugin, 'matches_query') and plugin.matches_query(query):
                 return plugin_name
         return None
+
+    def execute_plugin(self, query, *args, **kwargs):
+        plugin_name = self.find_plugin_for_query(query)
+        if plugin_name:
+            print(f"Executing plugin '{plugin_name}' for query: {query}")
+            return self.run_plugin(plugin_name, *args, **kwargs)
+        else:
+            print("No suitable plugin found for the query.")
+            return None
+
+
+    """
+        Wrap the below as tools that can be helpful for resolving tool/plugins errors!!
+    """
+    def reload_plugin(self, plugin_name):
+        if plugin_name in self.plugins:
+            self.unload_plugin(plugin_name)
+            self.load_plugin(plugin_name)
+        else:
+            print(f"Plugin '{plugin_name}' is not loaded.")
 
     def add_plugin(self, plugin_name, plugin_object):
         self.plugins[plugin_name] = plugin_object
