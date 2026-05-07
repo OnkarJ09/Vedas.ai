@@ -11,12 +11,6 @@ import os, re
 import json
 
 
-client = OpenAI(
-    base_url="https://integrate.api.nvidia.com/v1",
-    api_key=OPENAI_API_KEY,
-)
-
-
 class PluginManager:
     def __init__(self):
         self.plugin_dirs = []
@@ -25,6 +19,10 @@ class PluginManager:
         self.tool_map = {}
         self.dependencies = defaultdict(list)
         self._patch_import_exceptions()
+        self.client = OpenAI(
+            base_url="https://integrate.api.nvidia.com/v1",
+            api_key=OPENAI_API_KEY,
+        )
         self.personality = "vedas"
         self.tone = "smart"
         self.memory = MemoryManager()
@@ -160,14 +158,48 @@ class PluginManager:
         # ---------------------
         shortlisted_tools = self.shortlist_plugins(cleaned_query)
         if not shortlisted_tools:
-            print("[Vedas] No matching tools found.")
-            return "No suitable tools for query"
+            print("[DEBUG] No tools matched using fallback intelligence")
+
+            # 🧠 try extracting memory
+            memory_data = self.extract_memory(cleaned_query)
+
+            if memory_data["type"]:
+                self.memory.update_profile(
+                    memory_data["type"],
+                    memory_data["value"]
+                )
+
+                print("[MEMORY] Updated profile:", self.memory.get_profile())
+
+            # fallback response
+            fallback_response = self.general_chat(cleaned_query)
+
+            print("\n[Vedas Response]")
+            print("----------------")
+            print(fallback_response)
+            print("----------------\n")
+
+            return fallback_response
 
         print("[Vedas] Shortlisted:", shortlisted_tools)
 
         tools_meta = self.get_tools_metadata(shortlisted_tools)
 
         plan = self.get_plan_from_llm(cleaned_query, tools_meta)
+        # If no plan is there then the AI takes over!!
+        if not plan:
+            print("[DEBUG] Planner returned empty plan, fallback chat")
+
+            fallback_response = self.general_chat(cleaned_query)
+
+            print("\n[Vedas Response]")
+            print("----------------")
+            print(fallback_response)
+            print("----------------\n")
+
+            self.memory.add_short_term_memory("vedas", fallback_response)
+
+            return fallback_response
 
         print("[Vedas] Plan:", plan)
 
@@ -191,7 +223,7 @@ class PluginManager:
 
         mode = self.decide_mode(cleaned_query, state, outputs)
 
-        self.personality = mode.get("personality", "jarvis")
+        self.personality = mode.get("personality", "vedas")
         self.tone = mode.get("tone", "smart")
 
         print("[DEBUG] Mode selected:", self.personality, "|", self.tone)
@@ -241,7 +273,7 @@ class PluginManager:
             ONLY return JSON.
         """
 
-        response = client.chat.completions.create(
+        response = self.client.chat.completions.create(
             model="openai/gpt-oss-120b",
             messages=[{
                 "role": "user",
@@ -311,7 +343,7 @@ class PluginManager:
             {combined}
         """
 
-        response = client.chat.completions.create(
+        response = self.client.chat.completions.create(
             model="openai/gpt-oss-20b",  # or your NVIDIA model later
             messages=[
                 {"role": "system", "content": system_prompt},
@@ -363,7 +395,7 @@ class PluginManager:
             }}
         """
 
-        response = client.chat.completions.create(
+        response = self.client.chat.completions.create(
             model="openai/gpt-oss-20b",  # or your NVIDIA model later
             messages=[
                 {"role": "user", "content": prompt}
@@ -409,7 +441,7 @@ class PluginManager:
             - dark
         """
 
-        response = client.chat.completions.create(
+        response = self.client.chat.completions.create(
             model="openai/gpt-oss-20b",
             messages=[
                 {"role": "user", "content": prompt},
@@ -427,6 +459,79 @@ class PluginManager:
                 "tone": "smart",
                 "personality": "vedas",
             }
+
+    def extract_memory(self, query):
+        prompt = f"""
+            You are a memory extraction AI.
+        
+            User message:
+            {query}
+        
+            Extract important personal memory if present.
+        
+            Examples:
+            - "my name is onkar"
+            - {{"type": "name", "value": "onkar"}}
+        
+            - "my alias is maddog"
+            - {{"type": "alias", "value": "maddog"}}
+        
+            - "i like sarcastic mode"
+            - {{"type": "preference", "value": "sarcastic"}}
+        
+            If no important memory exists, return:
+            {{"type": null, "value": null}}
+        
+            Return ONLY JSON.
+        """
+
+        response = self.client.chat.completions.create(
+            model="openai/gpt-oss-20b",
+            messages=[
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0
+        )
+
+        import json
+
+        try:
+            return json.loads(response.choices[0].message.content)
+        except:
+            return {"type": None, "value": None}
+
+    def general_chat(self, query):
+        recent_context = self.memory.get_recent_context()
+        profile = self.memory.get_profile()
+
+        prompt = f"""
+            You are Vedas, an intelligent AI assistant.
+        
+            INSTRUCTIONS:
+            - Respond in short answers only
+            - Respond in brief only if the users asks to
+            
+            User profile:
+            {profile}
+        
+            Recent conversation:
+            {recent_context}
+        
+            User:
+            {query}
+        
+            Respond naturally and intelligently.
+        """
+
+        response = self.client.chat.completions.create(
+            model="openai/gpt-oss-20b",
+            messages=[
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0.7
+        )
+
+        return response.choices[0].message.content
 
     def get_tools_metadata(self, tool_names):
         tools = []

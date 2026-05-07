@@ -2,6 +2,7 @@ class MemoryManager:
     def __init__(self):
         self.short_term_memory = []
         self.long_term_memory = []
+        self.user_profile = {}
 
     def add_short_term_memory(self, role, content):
         self.short_term_memory.append({
@@ -23,4 +24,10 @@ class MemoryManager:
 
     def get_long_term_memory(self):
         return "\n".join(self.long_term_memory)
+
+    def update_profile(self, key, value):
+        self.user_profile[key] = value
+
+    def get_profile(self):
+        return self.user_profile
 
