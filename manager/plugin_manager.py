@@ -2,6 +2,7 @@ from utlis.text_normalizer import normalize_text
 from collections import defaultdict
 from utlis.state import AgentState
 from manager.env_manager import OPENAI_API_KEY
+from manager.memory_manager import MemoryManager
 from openai import OpenAI
 import importlib
 import builtins
@@ -26,6 +27,7 @@ class PluginManager:
         self._patch_import_exceptions()
         self.personality = "vedas"
         self.tone = "smart"
+        self.memory = MemoryManager()
 
     def _patch_import_exceptions(self):
         def import_hook(name, *args, **kwargs):
@@ -141,6 +143,9 @@ class PluginManager:
         return selected
 
     def execute_pipeline(self, query):
+        # For user query into memory records
+        self.memory.add_short_term_memory("user", query)
+
         analysis = self.analyze_intent(query)
 
         cleaned_query = analysis["cleaned"]
@@ -198,6 +203,9 @@ class PluginManager:
         print(final_output)
         print("----------------\n")
 
+        # To record Ai output into memory records
+        self.memory.add_short_term_memory("vedas", final_output)
+
         return final_output
 
     def safe_json_parse(self, text):
@@ -251,6 +259,9 @@ class PluginManager:
             return []
 
     def synthesize_response(self, query, outputs):
+        # Get the recent memory for context
+        recent_context = self.memory.get_recent_context()
+
         if not outputs:
             return "I couldn't find a response."
 
@@ -290,7 +301,10 @@ class PluginManager:
         """
 
         user_prompt = f"""
-            User query:
+            Recent conversation:
+            {recent_context}
+        
+            Current User query:
             {query}
 
             Tool outputs:
@@ -501,11 +515,18 @@ class PluginManager:
 
 
 if __name__ == "__main__":
+    # from pathlib import Path
+    # import os
+    #
+    # BASE_DIR = Path(__file__).resolve().parent.parent
+    #
+    # plugin_dir = (BASE_DIR / "plugins")
+
     # Example usage
     plugin_manager = PluginManager()
 
     # Add plugin directories
-    plugin_manager.add_directory('plugins')
+    plugin_manager.add_directory("plugins")
 
     # Load all plugins from the specified directories
     plugin_manager.load_plugins()
