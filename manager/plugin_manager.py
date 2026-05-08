@@ -1,7 +1,7 @@
 from utlis.text_normalizer import normalize_text
 from collections import defaultdict
 from utlis.state import AgentState
-from manager.env_manager import OPENAI_API_KEY
+from manager.env_manager import OPENAI_API_KEY, LARGE_OPENAI_MODEL, SMALL_OPENAI_MODEL
 from manager.memory_manager import MemoryManager
 from openai import OpenAI
 import importlib
@@ -23,6 +23,7 @@ class PluginManager:
             base_url="https://integrate.api.nvidia.com/v1",
             api_key=OPENAI_API_KEY,
         )
+        self.model = SMALL_OPENAI_MODEL     # The default model is OpenAI's small 20B model
         self.personality = "vedas"
         self.tone = "smart"
         self.memory = MemoryManager()
@@ -343,16 +344,9 @@ class PluginManager:
             {combined}
         """
 
-        response = self.client.chat.completions.create(
-            model="openai/gpt-oss-20b",  # or your NVIDIA model later
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            temperature=0.7
-        )
+        response = self.ask_llm(prompt=user_prompt, system_prompt=system_prompt, temperature=0.7)
 
-        return response.choices[0].message.content
+        return response
 
     def decide_mode(self, query, state, outputs):
         context = "\n".join(outputs)
@@ -395,16 +389,10 @@ class PluginManager:
             }}
         """
 
-        response = self.client.chat.completions.create(
-            model="openai/gpt-oss-20b",  # or your NVIDIA model later
-            messages=[
-                {"role": "user", "content": prompt}
-            ],
-            temperature=0
-        )
+        response = self.ask_llm(prompt, temperature=0)
 
         try:
-            return json.loads(response.choices[0].message.content)
+            return json.loads(response)
         except:
             return {"personality": "vedas", "tone": "smart"}
 
@@ -441,16 +429,10 @@ class PluginManager:
             - dark
         """
 
-        response = self.client.chat.completions.create(
-            model="openai/gpt-oss-20b",
-            messages=[
-                {"role": "user", "content": prompt},
-            ],
-            temperature=0
-        )
+        response = self.ask_llm(prompt, temperature=0)
 
         try:
-            return json.loads(response.choices[0].message.content) + {
+            return json.loads(response) + {
                 "cleaned": f"{normalized_query: 'cleaned'}"
             }
         except:
@@ -485,18 +467,10 @@ class PluginManager:
             Return ONLY JSON.
         """
 
-        response = self.client.chat.completions.create(
-            model="openai/gpt-oss-20b",
-            messages=[
-                {"role": "user", "content": prompt},
-            ],
-            temperature=0
-        )
-
-        import json
+        response = self.ask_llm(prompt, temperature=0)
 
         try:
-            return json.loads(response.choices[0].message.content)
+            return json.loads(response)
         except:
             return {"type": None, "value": None}
 
@@ -523,15 +497,9 @@ class PluginManager:
             Respond naturally and intelligently.
         """
 
-        response = self.client.chat.completions.create(
-            model="openai/gpt-oss-20b",
-            messages=[
-                {"role": "user", "content": prompt},
-            ],
-            temperature=0.7
-        )
+        response = self.ask_llm(prompt, temperature=0.7)
 
-        return response.choices[0].message.content
+        return response
 
     def get_tools_metadata(self, tool_names):
         tools = []
@@ -544,6 +512,22 @@ class PluginManager:
             })
 
         return tools
+
+    def ask_llm(self, prompt, temperature=0.7, system_prompt=None):
+        additional_message = {'role': 'system', 'content': system_prompt}
+
+        message = [{"role": "user", "content": prompt}]
+
+        if system_prompt:
+            message = message + [additional_message]
+
+        response = self.client.chat.completions.create(
+            model=self.model,
+            messages=message,
+            temperature=temperature
+        )
+
+        return response.choices[0].message.content
 
     def list_plugins(self):
         print("Loaded plugins:")
