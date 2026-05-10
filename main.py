@@ -4,6 +4,8 @@ Removing the mcp-use...
 Now using a custom framework and a custom manager to integrate the same behavior as the mcp-use!!!
 """
 from manager.plugin_manager import PluginManager
+from utlis.audio import take_command
+import asyncio
 
 """
     To-Do:
@@ -32,5 +34,5 @@ if __name__ == "__main__":
 
     while True:
         # Execute plugins/tools based on user input/queries
-        query = input("Enter a query: ")
+        query = asyncio.run(take_command())
         plugin_manager.execute_pipeline(query)

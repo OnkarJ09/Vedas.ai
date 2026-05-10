@@ -1,0 +1,5447 @@
+[
+  {
+    "short_name": "af-ZA-AdriNeural",
+    "language": "Afrikaans",
+    "lang_code": "af-ZA",
+    "locale": "af-ZA",
+    "accent": "ZA",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "South Africa"
+  },
+  {
+    "short_name": "af-ZA-WillemNeural",
+    "language": "Afrikaans",
+    "lang_code": "af-ZA",
+    "locale": "af-ZA",
+    "accent": "ZA",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "South Africa"
+  },
+  {
+    "short_name": "sq-AL-AnilaNeural",
+    "language": "Albanian",
+    "lang_code": "sq-AL",
+    "locale": "sq-AL",
+    "accent": "AL",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Albania"
+  },
+  {
+    "short_name": "sq-AL-IlirNeural",
+    "language": "Albanian",
+    "lang_code": "sq-AL",
+    "locale": "sq-AL",
+    "accent": "AL",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Albania"
+  },
+  {
+    "short_name": "am-ET-AmehaNeural",
+    "language": "Amharic",
+    "lang_code": "am-ET",
+    "locale": "am-ET",
+    "accent": "ET",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Ethiopia"
+  },
+  {
+    "short_name": "am-ET-MekdesNeural",
+    "language": "Amharic",
+    "lang_code": "am-ET",
+    "locale": "am-ET",
+    "accent": "ET",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Ethiopia"
+  },
+  {
+    "short_name": "ar-DZ-AminaNeural",
+    "language": "Arabic",
+    "lang_code": "ar-DZ",
+    "locale": "ar-DZ",
+    "accent": "DZ",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-DZ-IsmaelNeural",
+    "language": "Arabic",
+    "lang_code": "ar-DZ",
+    "locale": "ar-DZ",
+    "accent": "DZ",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-BH-AliNeural",
+    "language": "Arabic",
+    "lang_code": "ar-BH",
+    "locale": "ar-BH",
+    "accent": "BH",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-BH-LailaNeural",
+    "language": "Arabic",
+    "lang_code": "ar-BH",
+    "locale": "ar-BH",
+    "accent": "BH",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-EG-SalmaNeural",
+    "language": "Arabic",
+    "lang_code": "ar-EG",
+    "locale": "ar-EG",
+    "accent": "EG",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-EG-ShakirNeural",
+    "language": "Arabic",
+    "lang_code": "ar-EG",
+    "locale": "ar-EG",
+    "accent": "EG",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-IQ-BasselNeural",
+    "language": "Arabic",
+    "lang_code": "ar-IQ",
+    "locale": "ar-IQ",
+    "accent": "IQ",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-IQ-RanaNeural",
+    "language": "Arabic",
+    "lang_code": "ar-IQ",
+    "locale": "ar-IQ",
+    "accent": "IQ",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-JO-SanaNeural",
+    "language": "Arabic",
+    "lang_code": "ar-JO",
+    "locale": "ar-JO",
+    "accent": "JO",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-JO-TaimNeural",
+    "language": "Arabic",
+    "lang_code": "ar-JO",
+    "locale": "ar-JO",
+    "accent": "JO",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-KW-FahedNeural",
+    "language": "Arabic",
+    "lang_code": "ar-KW",
+    "locale": "ar-KW",
+    "accent": "KW",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-KW-NouraNeural",
+    "language": "Arabic",
+    "lang_code": "ar-KW",
+    "locale": "ar-KW",
+    "accent": "KW",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-LB-LaylaNeural",
+    "language": "Arabic",
+    "lang_code": "ar-LB",
+    "locale": "ar-LB",
+    "accent": "LB",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-LB-RamiNeural",
+    "language": "Arabic",
+    "lang_code": "ar-LB",
+    "locale": "ar-LB",
+    "accent": "LB",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-LY-ImanNeural",
+    "language": "Arabic",
+    "lang_code": "ar-LY",
+    "locale": "ar-LY",
+    "accent": "LY",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-LY-OmarNeural",
+    "language": "Arabic",
+    "lang_code": "ar-LY",
+    "locale": "ar-LY",
+    "accent": "LY",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-MA-JamalNeural",
+    "language": "Arabic",
+    "lang_code": "ar-MA",
+    "locale": "ar-MA",
+    "accent": "MA",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-MA-MounaNeural",
+    "language": "Arabic",
+    "lang_code": "ar-MA",
+    "locale": "ar-MA",
+    "accent": "MA",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-OM-AbdullahNeural",
+    "language": "Arabic",
+    "lang_code": "ar-OM",
+    "locale": "ar-OM",
+    "accent": "OM",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-OM-AyshaNeural",
+    "language": "Arabic",
+    "lang_code": "ar-OM",
+    "locale": "ar-OM",
+    "accent": "OM",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-QA-AmalNeural",
+    "language": "Arabic",
+    "lang_code": "ar-QA",
+    "locale": "ar-QA",
+    "accent": "QA",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-QA-MoazNeural",
+    "language": "Arabic",
+    "lang_code": "ar-QA",
+    "locale": "ar-QA",
+    "accent": "QA",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-SA-HamedNeural",
+    "language": "Arabic",
+    "lang_code": "ar-SA",
+    "locale": "ar-SA",
+    "accent": "SA",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-SA-ZariyahNeural",
+    "language": "Arabic",
+    "lang_code": "ar-SA",
+    "locale": "ar-SA",
+    "accent": "SA",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-SY-AmanyNeural",
+    "language": "Arabic",
+    "lang_code": "ar-SY",
+    "locale": "ar-SY",
+    "accent": "SY",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-SY-LaithNeural",
+    "language": "Arabic",
+    "lang_code": "ar-SY",
+    "locale": "ar-SY",
+    "accent": "SY",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-TN-HediNeural",
+    "language": "Arabic",
+    "lang_code": "ar-TN",
+    "locale": "ar-TN",
+    "accent": "TN",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-TN-ReemNeural",
+    "language": "Arabic",
+    "lang_code": "ar-TN",
+    "locale": "ar-TN",
+    "accent": "TN",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-AE-FatimaNeural",
+    "language": "Arabic",
+    "lang_code": "ar-AE",
+    "locale": "ar-AE",
+    "accent": "AE",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-AE-HamdanNeural",
+    "language": "Arabic",
+    "lang_code": "ar-AE",
+    "locale": "ar-AE",
+    "accent": "AE",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-YE-MaryamNeural",
+    "language": "Arabic",
+    "lang_code": "ar-YE",
+    "locale": "ar-YE",
+    "accent": "YE",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "ar-YE-SalehNeural",
+    "language": "Arabic",
+    "lang_code": "ar-YE",
+    "locale": "ar-YE",
+    "accent": "YE",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Arab Region"
+  },
+  {
+    "short_name": "az-AZ-BabekNeural",
+    "language": "Azerbaijani",
+    "lang_code": "az-AZ",
+    "locale": "az-AZ",
+    "accent": "AZ",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Azerbaijan"
+  },
+  {
+    "short_name": "az-AZ-BanuNeural",
+    "language": "Azerbaijani",
+    "lang_code": "az-AZ",
+    "locale": "az-AZ",
+    "accent": "AZ",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Azerbaijan"
+  },
+  {
+    "short_name": "bn-BD-NabanitaNeural",
+    "language": "Bengali",
+    "lang_code": "bn-BD",
+    "locale": "bn-BD",
+    "accent": "BD",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India/Bangladesh"
+  },
+  {
+    "short_name": "bn-BD-PradeepNeural",
+    "language": "Bengali",
+    "lang_code": "bn-BD",
+    "locale": "bn-BD",
+    "accent": "BD",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India/Bangladesh"
+  },
+  {
+    "short_name": "bn-IN-BashkarNeural",
+    "language": "Bengali",
+    "lang_code": "bn-IN",
+    "locale": "bn-IN",
+    "accent": "Indian",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India/Bangladesh"
+  },
+  {
+    "short_name": "bn-IN-TanishaaNeural",
+    "language": "Bengali",
+    "lang_code": "bn-IN",
+    "locale": "bn-IN",
+    "accent": "Indian",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India/Bangladesh"
+  },
+  {
+    "short_name": "bs-BA-GoranNeural",
+    "language": "Bosnian",
+    "lang_code": "bs-BA",
+    "locale": "bs-BA",
+    "accent": "BA",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Bosnia and Herzegovina"
+  },
+  {
+    "short_name": "bs-BA-VesnaNeural",
+    "language": "Bosnian",
+    "lang_code": "bs-BA",
+    "locale": "bs-BA",
+    "accent": "BA",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Bosnia and Herzegovina"
+  },
+  {
+    "short_name": "bg-BG-BorislavNeural",
+    "language": "Bulgarian",
+    "lang_code": "bg-BG",
+    "locale": "bg-BG",
+    "accent": "BG",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Bulgaria"
+  },
+  {
+    "short_name": "bg-BG-KalinaNeural",
+    "language": "Bulgarian",
+    "lang_code": "bg-BG",
+    "locale": "bg-BG",
+    "accent": "BG",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Bulgaria"
+  },
+  {
+    "short_name": "my-MM-NilarNeural",
+    "language": "Burmese",
+    "lang_code": "my-MM",
+    "locale": "my-MM",
+    "accent": "MM",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Myanmar"
+  },
+  {
+    "short_name": "my-MM-ThihaNeural",
+    "language": "Burmese",
+    "lang_code": "my-MM",
+    "locale": "my-MM",
+    "accent": "MM",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Myanmar"
+  },
+  {
+    "short_name": "ca-ES-EnricNeural",
+    "language": "Catalan",
+    "lang_code": "ca-ES",
+    "locale": "ca-ES",
+    "accent": "ES",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spain"
+  },
+  {
+    "short_name": "ca-ES-JoanaNeural",
+    "language": "Catalan",
+    "lang_code": "ca-ES",
+    "locale": "ca-ES",
+    "accent": "ES",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spain"
+  },
+  {
+    "short_name": "zh-HK-HiuGaaiNeural",
+    "language": "Chinese",
+    "lang_code": "zh-HK",
+    "locale": "zh-HK",
+    "accent": "HK",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "China"
+  },
+  {
+    "short_name": "zh-HK-HiuMaanNeural",
+    "language": "Chinese",
+    "lang_code": "zh-HK",
+    "locale": "zh-HK",
+    "accent": "HK",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "China"
+  },
+  {
+    "short_name": "zh-HK-WanLungNeural",
+    "language": "Chinese",
+    "lang_code": "zh-HK",
+    "locale": "zh-HK",
+    "accent": "HK",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "China"
+  },
+  {
+    "short_name": "zh-CN-XiaoxiaoNeural",
+    "language": "Chinese",
+    "lang_code": "zh-CN",
+    "locale": "zh-CN",
+    "accent": "CN",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "China"
+  },
+  {
+    "short_name": "zh-CN-XiaoyiNeural",
+    "language": "Chinese",
+    "lang_code": "zh-CN",
+    "locale": "zh-CN",
+    "accent": "CN",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "China"
+  },
+  {
+    "short_name": "zh-CN-YunjianNeural",
+    "language": "Chinese",
+    "lang_code": "zh-CN",
+    "locale": "zh-CN",
+    "accent": "CN",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "China"
+  },
+  {
+    "short_name": "zh-CN-YunxiNeural",
+    "language": "Chinese",
+    "lang_code": "zh-CN",
+    "locale": "zh-CN",
+    "accent": "CN",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "China"
+  },
+  {
+    "short_name": "zh-CN-YunxiaNeural",
+    "language": "Chinese",
+    "lang_code": "zh-CN",
+    "locale": "zh-CN",
+    "accent": "CN",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "China"
+  },
+  {
+    "short_name": "zh-CN-YunyangNeural",
+    "language": "Chinese",
+    "lang_code": "zh-CN",
+    "locale": "zh-CN",
+    "accent": "CN",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "China"
+  },
+  {
+    "short_name": "zh-CN-liaoning-XiaobeiNeural",
+    "language": "Chinese",
+    "lang_code": "zh-CN-liaoning",
+    "locale": "zh-CN-liaoning",
+    "accent": "CN",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "China"
+  },
+  {
+    "short_name": "zh-TW-HsiaoChenNeural",
+    "language": "Chinese",
+    "lang_code": "zh-TW",
+    "locale": "zh-TW",
+    "accent": "TW",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "China"
+  },
+  {
+    "short_name": "zh-TW-YunJheNeural",
+    "language": "Chinese",
+    "lang_code": "zh-TW",
+    "locale": "zh-TW",
+    "accent": "TW",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "China"
+  },
+  {
+    "short_name": "zh-TW-HsiaoYuNeural",
+    "language": "Chinese",
+    "lang_code": "zh-TW",
+    "locale": "zh-TW",
+    "accent": "TW",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "China"
+  },
+  {
+    "short_name": "zh-CN-shaanxi-XiaoniNeural",
+    "language": "Chinese",
+    "lang_code": "zh-CN-shaanxi",
+    "locale": "zh-CN-shaanxi",
+    "accent": "CN",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "China"
+  },
+  {
+    "short_name": "hr-HR-GabrijelaNeural",
+    "language": "Croatian",
+    "lang_code": "hr-HR",
+    "locale": "hr-HR",
+    "accent": "HR",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Croatia"
+  },
+  {
+    "short_name": "hr-HR-SreckoNeural",
+    "language": "Croatian",
+    "lang_code": "hr-HR",
+    "locale": "hr-HR",
+    "accent": "HR",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Croatia"
+  },
+  {
+    "short_name": "cs-CZ-AntoninNeural",
+    "language": "Czech",
+    "lang_code": "cs-CZ",
+    "locale": "cs-CZ",
+    "accent": "CZ",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Czech Republic"
+  },
+  {
+    "short_name": "cs-CZ-VlastaNeural",
+    "language": "Czech",
+    "lang_code": "cs-CZ",
+    "locale": "cs-CZ",
+    "accent": "CZ",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Czech Republic"
+  },
+  {
+    "short_name": "da-DK-ChristelNeural",
+    "language": "Danish",
+    "lang_code": "da-DK",
+    "locale": "da-DK",
+    "accent": "DK",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Denmark"
+  },
+  {
+    "short_name": "da-DK-JeppeNeural",
+    "language": "Danish",
+    "lang_code": "da-DK",
+    "locale": "da-DK",
+    "accent": "DK",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Denmark"
+  },
+  {
+    "short_name": "nl-BE-ArnaudNeural",
+    "language": "Dutch",
+    "lang_code": "nl-BE",
+    "locale": "nl-BE",
+    "accent": "BE",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Netherlands"
+  },
+  {
+    "short_name": "nl-BE-DenaNeural",
+    "language": "Dutch",
+    "lang_code": "nl-BE",
+    "locale": "nl-BE",
+    "accent": "BE",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Netherlands"
+  },
+  {
+    "short_name": "nl-NL-ColetteNeural",
+    "language": "Dutch",
+    "lang_code": "nl-NL",
+    "locale": "nl-NL",
+    "accent": "NL",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Netherlands"
+  },
+  {
+    "short_name": "nl-NL-FennaNeural",
+    "language": "Dutch",
+    "lang_code": "nl-NL",
+    "locale": "nl-NL",
+    "accent": "NL",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Netherlands"
+  },
+  {
+    "short_name": "nl-NL-MaartenNeural",
+    "language": "Dutch",
+    "lang_code": "nl-NL",
+    "locale": "nl-NL",
+    "accent": "NL",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Netherlands"
+  },
+  {
+    "short_name": "en-AU-NatashaNeural",
+    "language": "English",
+    "lang_code": "en-AU",
+    "locale": "en-AU",
+    "accent": "Australian",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-AU-WilliamNeural",
+    "language": "English",
+    "lang_code": "en-AU",
+    "locale": "en-AU",
+    "accent": "Australian",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-CA-ClaraNeural",
+    "language": "English",
+    "lang_code": "en-CA",
+    "locale": "en-CA",
+    "accent": "Canadian",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-CA-LiamNeural",
+    "language": "English",
+    "lang_code": "en-CA",
+    "locale": "en-CA",
+    "accent": "Canadian",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-HK-SamNeural",
+    "language": "English",
+    "lang_code": "en-HK",
+    "locale": "en-HK",
+    "accent": "HK",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-HK-YanNeural",
+    "language": "English",
+    "lang_code": "en-HK",
+    "locale": "en-HK",
+    "accent": "HK",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-IN-NeerjaNeural",
+    "language": "English",
+    "lang_code": "en-IN",
+    "locale": "en-IN",
+    "accent": "Indian",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-IN-PrabhatNeural",
+    "language": "English",
+    "lang_code": "en-IN",
+    "locale": "en-IN",
+    "accent": "Indian",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-IE-ConnorNeural",
+    "language": "English",
+    "lang_code": "en-IE",
+    "locale": "en-IE",
+    "accent": "IE",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-IE-EmilyNeural",
+    "language": "English",
+    "lang_code": "en-IE",
+    "locale": "en-IE",
+    "accent": "IE",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-KE-AsiliaNeural",
+    "language": "English",
+    "lang_code": "en-KE",
+    "locale": "en-KE",
+    "accent": "KE",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-KE-ChilembaNeural",
+    "language": "English",
+    "lang_code": "en-KE",
+    "locale": "en-KE",
+    "accent": "KE",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-NZ-MitchellNeural",
+    "language": "English",
+    "lang_code": "en-NZ",
+    "locale": "en-NZ",
+    "accent": "NZ",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-NZ-MollyNeural",
+    "language": "English",
+    "lang_code": "en-NZ",
+    "locale": "en-NZ",
+    "accent": "NZ",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-NG-AbeoNeural",
+    "language": "English",
+    "lang_code": "en-NG",
+    "locale": "en-NG",
+    "accent": "NG",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-NG-EzinneNeural",
+    "language": "English",
+    "lang_code": "en-NG",
+    "locale": "en-NG",
+    "accent": "NG",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-PH-JamesNeural",
+    "language": "English",
+    "lang_code": "en-PH",
+    "locale": "en-PH",
+    "accent": "PH",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-PH-RosaNeural",
+    "language": "English",
+    "lang_code": "en-PH",
+    "locale": "en-PH",
+    "accent": "PH",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-SG-LunaNeural",
+    "language": "English",
+    "lang_code": "en-SG",
+    "locale": "en-SG",
+    "accent": "SG",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-SG-WayneNeural",
+    "language": "English",
+    "lang_code": "en-SG",
+    "locale": "en-SG",
+    "accent": "SG",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-ZA-LeahNeural",
+    "language": "English",
+    "lang_code": "en-ZA",
+    "locale": "en-ZA",
+    "accent": "ZA",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-ZA-LukeNeural",
+    "language": "English",
+    "lang_code": "en-ZA",
+    "locale": "en-ZA",
+    "accent": "ZA",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-TZ-ElimuNeural",
+    "language": "English",
+    "lang_code": "en-TZ",
+    "locale": "en-TZ",
+    "accent": "TZ",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-TZ-ImaniNeural",
+    "language": "English",
+    "lang_code": "en-TZ",
+    "locale": "en-TZ",
+    "accent": "TZ",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-GB-LibbyNeural",
+    "language": "English",
+    "lang_code": "en-GB",
+    "locale": "en-GB",
+    "accent": "British",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-GB-MaisieNeural",
+    "language": "English",
+    "lang_code": "en-GB",
+    "locale": "en-GB",
+    "accent": "British",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-GB-RyanNeural",
+    "language": "English",
+    "lang_code": "en-GB",
+    "locale": "en-GB",
+    "accent": "British",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-GB-SoniaNeural",
+    "language": "English",
+    "lang_code": "en-GB",
+    "locale": "en-GB",
+    "accent": "British",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-GB-ThomasNeural",
+    "language": "English",
+    "lang_code": "en-GB",
+    "locale": "en-GB",
+    "accent": "British",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-US-AriaNeural",
+    "language": "English",
+    "lang_code": "en-US",
+    "locale": "en-US",
+    "accent": "American",
+    "gender": "Female",
+    "style_tags": [
+      "confident",
+      "friendly",
+      "neural",
+      "news",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-US-AnaNeural",
+    "language": "English",
+    "lang_code": "en-US",
+    "locale": "en-US",
+    "accent": "American",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-US-ChristopherNeural",
+    "language": "English",
+    "lang_code": "en-US",
+    "locale": "en-US",
+    "accent": "American",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-US-EricNeural",
+    "language": "English",
+    "lang_code": "en-US",
+    "locale": "en-US",
+    "accent": "American",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-US-GuyNeural",
+    "language": "English",
+    "lang_code": "en-US",
+    "locale": "en-US",
+    "accent": "American",
+    "gender": "Male",
+    "style_tags": [
+      "cinematic",
+      "clear",
+      "deep",
+      "jarvis",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-US-JennyNeural",
+    "language": "English",
+    "lang_code": "en-US",
+    "locale": "en-US",
+    "accent": "American",
+    "gender": "Female",
+    "style_tags": [
+      "assistant",
+      "friendly",
+      "neural",
+      "soft",
+      "warm"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-US-MichelleNeural",
+    "language": "English",
+    "lang_code": "en-US",
+    "locale": "en-US",
+    "accent": "American",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-US-RogerNeural",
+    "language": "English",
+    "lang_code": "en-US",
+    "locale": "en-US",
+    "accent": "American",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "en-US-SteffanNeural",
+    "language": "English",
+    "lang_code": "en-US",
+    "locale": "en-US",
+    "accent": "American",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "English-speaking Regions"
+  },
+  {
+    "short_name": "et-EE-AnuNeural",
+    "language": "Estonian",
+    "lang_code": "et-EE",
+    "locale": "et-EE",
+    "accent": "EE",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Estonia"
+  },
+  {
+    "short_name": "et-EE-KertNeural",
+    "language": "Estonian",
+    "lang_code": "et-EE",
+    "locale": "et-EE",
+    "accent": "EE",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Estonia"
+  },
+  {
+    "short_name": "fil-PH-AngeloNeural",
+    "language": "Filipino",
+    "lang_code": "fil-PH",
+    "locale": "fil-PH",
+    "accent": "PH",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Philippines"
+  },
+  {
+    "short_name": "fil-PH-BlessicaNeural",
+    "language": "Filipino",
+    "lang_code": "fil-PH",
+    "locale": "fil-PH",
+    "accent": "PH",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Philippines"
+  },
+  {
+    "short_name": "fi-FI-HarriNeural",
+    "language": "Finnish",
+    "lang_code": "fi-FI",
+    "locale": "fi-FI",
+    "accent": "FI",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Finland"
+  },
+  {
+    "short_name": "fi-FI-NooraNeural",
+    "language": "Finnish",
+    "lang_code": "fi-FI",
+    "locale": "fi-FI",
+    "accent": "FI",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Finland"
+  },
+  {
+    "short_name": "fr-BE-CharlineNeural",
+    "language": "French",
+    "lang_code": "fr-BE",
+    "locale": "fr-BE",
+    "accent": "BE",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "France"
+  },
+  {
+    "short_name": "fr-BE-GerardNeural",
+    "language": "French",
+    "lang_code": "fr-BE",
+    "locale": "fr-BE",
+    "accent": "BE",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "France"
+  },
+  {
+    "short_name": "fr-CA-AntoineNeural",
+    "language": "French",
+    "lang_code": "fr-CA",
+    "locale": "fr-CA",
+    "accent": "Canadian",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "France"
+  },
+  {
+    "short_name": "fr-CA-JeanNeural",
+    "language": "French",
+    "lang_code": "fr-CA",
+    "locale": "fr-CA",
+    "accent": "Canadian",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "France"
+  },
+  {
+    "short_name": "fr-CA-SylvieNeural",
+    "language": "French",
+    "lang_code": "fr-CA",
+    "locale": "fr-CA",
+    "accent": "Canadian",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "France"
+  },
+  {
+    "short_name": "fr-FR-DeniseNeural",
+    "language": "French",
+    "lang_code": "fr-FR",
+    "locale": "fr-FR",
+    "accent": "FR",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "France"
+  },
+  {
+    "short_name": "fr-FR-EloiseNeural",
+    "language": "French",
+    "lang_code": "fr-FR",
+    "locale": "fr-FR",
+    "accent": "FR",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "France"
+  },
+  {
+    "short_name": "fr-FR-HenriNeural",
+    "language": "French",
+    "lang_code": "fr-FR",
+    "locale": "fr-FR",
+    "accent": "FR",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "France"
+  },
+  {
+    "short_name": "fr-CH-ArianeNeural",
+    "language": "French",
+    "lang_code": "fr-CH",
+    "locale": "fr-CH",
+    "accent": "CH",
+    "gender": "Female",
+    "style_tags": [
+      "confident",
+      "friendly",
+      "neural",
+      "news",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "France"
+  },
+  {
+    "short_name": "fr-CH-FabriceNeural",
+    "language": "French",
+    "lang_code": "fr-CH",
+    "locale": "fr-CH",
+    "accent": "CH",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "France"
+  },
+  {
+    "short_name": "gl-ES-RoiNeural",
+    "language": "Galician",
+    "lang_code": "gl-ES",
+    "locale": "gl-ES",
+    "accent": "ES",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spain"
+  },
+  {
+    "short_name": "gl-ES-SabelaNeural",
+    "language": "Galician",
+    "lang_code": "gl-ES",
+    "locale": "gl-ES",
+    "accent": "ES",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spain"
+  },
+  {
+    "short_name": "ka-GE-EkaNeural",
+    "language": "Georgian",
+    "lang_code": "ka-GE",
+    "locale": "ka-GE",
+    "accent": "GE",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Georgia"
+  },
+  {
+    "short_name": "ka-GE-GiorgiNeural",
+    "language": "Georgian",
+    "lang_code": "ka-GE",
+    "locale": "ka-GE",
+    "accent": "GE",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Georgia"
+  },
+  {
+    "short_name": "de-AT-IngridNeural",
+    "language": "German",
+    "lang_code": "de-AT",
+    "locale": "de-AT",
+    "accent": "AT",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Germany"
+  },
+  {
+    "short_name": "de-AT-JonasNeural",
+    "language": "German",
+    "lang_code": "de-AT",
+    "locale": "de-AT",
+    "accent": "AT",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Germany"
+  },
+  {
+    "short_name": "de-DE-AmalaNeural",
+    "language": "German",
+    "lang_code": "de-DE",
+    "locale": "de-DE",
+    "accent": "DE",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Germany"
+  },
+  {
+    "short_name": "de-DE-ConradNeural",
+    "language": "German",
+    "lang_code": "de-DE",
+    "locale": "de-DE",
+    "accent": "DE",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Germany"
+  },
+  {
+    "short_name": "de-DE-KatjaNeural",
+    "language": "German",
+    "lang_code": "de-DE",
+    "locale": "de-DE",
+    "accent": "DE",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Germany"
+  },
+  {
+    "short_name": "de-DE-KillianNeural",
+    "language": "German",
+    "lang_code": "de-DE",
+    "locale": "de-DE",
+    "accent": "DE",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Germany"
+  },
+  {
+    "short_name": "de-CH-JanNeural",
+    "language": "German",
+    "lang_code": "de-CH",
+    "locale": "de-CH",
+    "accent": "CH",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Germany"
+  },
+  {
+    "short_name": "de-CH-LeniNeural",
+    "language": "German",
+    "lang_code": "de-CH",
+    "locale": "de-CH",
+    "accent": "CH",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Germany"
+  },
+  {
+    "short_name": "el-GR-AthinaNeural",
+    "language": "Greek",
+    "lang_code": "el-GR",
+    "locale": "el-GR",
+    "accent": "GR",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Greece"
+  },
+  {
+    "short_name": "el-GR-NestorasNeural",
+    "language": "Greek",
+    "lang_code": "el-GR",
+    "locale": "el-GR",
+    "accent": "GR",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Greece"
+  },
+  {
+    "short_name": "gu-IN-DhwaniNeural",
+    "language": "Gujarati",
+    "lang_code": "gu-IN",
+    "locale": "gu-IN",
+    "accent": "Indian",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India"
+  },
+  {
+    "short_name": "gu-IN-NiranjanNeural",
+    "language": "Gujarati",
+    "lang_code": "gu-IN",
+    "locale": "gu-IN",
+    "accent": "Indian",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India"
+  },
+  {
+    "short_name": "he-IL-AvriNeural",
+    "language": "Hebrew",
+    "lang_code": "he-IL",
+    "locale": "he-IL",
+    "accent": "IL",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Israel"
+  },
+  {
+    "short_name": "he-IL-HilaNeural",
+    "language": "Hebrew",
+    "lang_code": "he-IL",
+    "locale": "he-IL",
+    "accent": "IL",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Israel"
+  },
+  {
+    "short_name": "hi-IN-MadhurNeural",
+    "language": "Hindi",
+    "lang_code": "hi-IN",
+    "locale": "hi-IN",
+    "accent": "Indian",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India"
+  },
+  {
+    "short_name": "hi-IN-SwaraNeural",
+    "language": "Hindi",
+    "lang_code": "hi-IN",
+    "locale": "hi-IN",
+    "accent": "Indian",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India"
+  },
+  {
+    "short_name": "hu-HU-NoemiNeural",
+    "language": "Hungarian",
+    "lang_code": "hu-HU",
+    "locale": "hu-HU",
+    "accent": "HU",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Hungary"
+  },
+  {
+    "short_name": "hu-HU-TamasNeural",
+    "language": "Hungarian",
+    "lang_code": "hu-HU",
+    "locale": "hu-HU",
+    "accent": "HU",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Hungary"
+  },
+  {
+    "short_name": "is-IS-GudrunNeural",
+    "language": "Icelandic",
+    "lang_code": "is-IS",
+    "locale": "is-IS",
+    "accent": "IS",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Iceland"
+  },
+  {
+    "short_name": "is-IS-GunnarNeural",
+    "language": "Icelandic",
+    "lang_code": "is-IS",
+    "locale": "is-IS",
+    "accent": "IS",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Iceland"
+  },
+  {
+    "short_name": "id-ID-ArdiNeural",
+    "language": "Indonesian",
+    "lang_code": "id-ID",
+    "locale": "id-ID",
+    "accent": "ID",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Indonesia"
+  },
+  {
+    "short_name": "id-ID-GadisNeural",
+    "language": "Indonesian",
+    "lang_code": "id-ID",
+    "locale": "id-ID",
+    "accent": "ID",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Indonesia"
+  },
+  {
+    "short_name": "ga-IE-ColmNeural",
+    "language": "Irish",
+    "lang_code": "ga-IE",
+    "locale": "ga-IE",
+    "accent": "IE",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Ireland"
+  },
+  {
+    "short_name": "ga-IE-OrlaNeural",
+    "language": "Irish",
+    "lang_code": "ga-IE",
+    "locale": "ga-IE",
+    "accent": "IE",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Ireland"
+  },
+  {
+    "short_name": "it-IT-DiegoNeural",
+    "language": "Italian",
+    "lang_code": "it-IT",
+    "locale": "it-IT",
+    "accent": "IT",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Italy"
+  },
+  {
+    "short_name": "it-IT-ElsaNeural",
+    "language": "Italian",
+    "lang_code": "it-IT",
+    "locale": "it-IT",
+    "accent": "IT",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Italy"
+  },
+  {
+    "short_name": "it-IT-IsabellaNeural",
+    "language": "Italian",
+    "lang_code": "it-IT",
+    "locale": "it-IT",
+    "accent": "IT",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Italy"
+  },
+  {
+    "short_name": "ja-JP-KeitaNeural",
+    "language": "Japanese",
+    "lang_code": "ja-JP",
+    "locale": "ja-JP",
+    "accent": "JP",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Japan"
+  },
+  {
+    "short_name": "ja-JP-NanamiNeural",
+    "language": "Japanese",
+    "lang_code": "ja-JP",
+    "locale": "ja-JP",
+    "accent": "JP",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Japan"
+  },
+  {
+    "short_name": "jv-ID-DimasNeural",
+    "language": "Javanese",
+    "lang_code": "jv-ID",
+    "locale": "jv-ID",
+    "accent": "ID",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Indonesia"
+  },
+  {
+    "short_name": "jv-ID-SitiNeural",
+    "language": "Javanese",
+    "lang_code": "jv-ID",
+    "locale": "jv-ID",
+    "accent": "ID",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Indonesia"
+  },
+  {
+    "short_name": "kn-IN-GaganNeural",
+    "language": "Kannada",
+    "lang_code": "kn-IN",
+    "locale": "kn-IN",
+    "accent": "Indian",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India"
+  },
+  {
+    "short_name": "kn-IN-SapnaNeural",
+    "language": "Kannada",
+    "lang_code": "kn-IN",
+    "locale": "kn-IN",
+    "accent": "Indian",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India"
+  },
+  {
+    "short_name": "kk-KZ-AigulNeural",
+    "language": "Kazakh",
+    "lang_code": "kk-KZ",
+    "locale": "kk-KZ",
+    "accent": "KZ",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Kazakhstan"
+  },
+  {
+    "short_name": "kk-KZ-DauletNeural",
+    "language": "Kazakh",
+    "lang_code": "kk-KZ",
+    "locale": "kk-KZ",
+    "accent": "KZ",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Kazakhstan"
+  },
+  {
+    "short_name": "km-KH-PisethNeural",
+    "language": "Khmer",
+    "lang_code": "km-KH",
+    "locale": "km-KH",
+    "accent": "KH",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Cambodia"
+  },
+  {
+    "short_name": "km-KH-SreymomNeural",
+    "language": "Khmer",
+    "lang_code": "km-KH",
+    "locale": "km-KH",
+    "accent": "KH",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Cambodia"
+  },
+  {
+    "short_name": "ko-KR-InJoonNeural",
+    "language": "Korean",
+    "lang_code": "ko-KR",
+    "locale": "ko-KR",
+    "accent": "KR",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "South Korea"
+  },
+  {
+    "short_name": "ko-KR-SunHiNeural",
+    "language": "Korean",
+    "lang_code": "ko-KR",
+    "locale": "ko-KR",
+    "accent": "KR",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "South Korea"
+  },
+  {
+    "short_name": "lo-LA-ChanthavongNeural",
+    "language": "Lao",
+    "lang_code": "lo-LA",
+    "locale": "lo-LA",
+    "accent": "LA",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Laos"
+  },
+  {
+    "short_name": "lo-LA-KeomanyNeural",
+    "language": "Lao",
+    "lang_code": "lo-LA",
+    "locale": "lo-LA",
+    "accent": "LA",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Laos"
+  },
+  {
+    "short_name": "lv-LV-EveritaNeural",
+    "language": "Latvian",
+    "lang_code": "lv-LV",
+    "locale": "lv-LV",
+    "accent": "LV",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Latvia"
+  },
+  {
+    "short_name": "lv-LV-NilsNeural",
+    "language": "Latvian",
+    "lang_code": "lv-LV",
+    "locale": "lv-LV",
+    "accent": "LV",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Latvia"
+  },
+  {
+    "short_name": "lt-LT-LeonasNeural",
+    "language": "Lithuanian",
+    "lang_code": "lt-LT",
+    "locale": "lt-LT",
+    "accent": "LT",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Lithuania"
+  },
+  {
+    "short_name": "lt-LT-OnaNeural",
+    "language": "Lithuanian",
+    "lang_code": "lt-LT",
+    "locale": "lt-LT",
+    "accent": "LT",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Lithuania"
+  },
+  {
+    "short_name": "mk-MK-AleksandarNeural",
+    "language": "Macedonian",
+    "lang_code": "mk-MK",
+    "locale": "mk-MK",
+    "accent": "MK",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "North Macedonia"
+  },
+  {
+    "short_name": "mk-MK-MarijaNeural",
+    "language": "Macedonian",
+    "lang_code": "mk-MK",
+    "locale": "mk-MK",
+    "accent": "MK",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "North Macedonia"
+  },
+  {
+    "short_name": "ms-MY-OsmanNeural",
+    "language": "Malay",
+    "lang_code": "ms-MY",
+    "locale": "ms-MY",
+    "accent": "MY",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Malaysia"
+  },
+  {
+    "short_name": "ms-MY-YasminNeural",
+    "language": "Malay",
+    "lang_code": "ms-MY",
+    "locale": "ms-MY",
+    "accent": "MY",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Malaysia"
+  },
+  {
+    "short_name": "ml-IN-MidhunNeural",
+    "language": "Malayalam",
+    "lang_code": "ml-IN",
+    "locale": "ml-IN",
+    "accent": "Indian",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India"
+  },
+  {
+    "short_name": "ml-IN-SobhanaNeural",
+    "language": "Malayalam",
+    "lang_code": "ml-IN",
+    "locale": "ml-IN",
+    "accent": "Indian",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India"
+  },
+  {
+    "short_name": "mt-MT-GraceNeural",
+    "language": "Maltese",
+    "lang_code": "mt-MT",
+    "locale": "mt-MT",
+    "accent": "MT",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Malta"
+  },
+  {
+    "short_name": "mt-MT-JosephNeural",
+    "language": "Maltese",
+    "lang_code": "mt-MT",
+    "locale": "mt-MT",
+    "accent": "MT",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Malta"
+  },
+  {
+    "short_name": "mr-IN-AarohiNeural",
+    "language": "Marathi",
+    "lang_code": "mr-IN",
+    "locale": "mr-IN",
+    "accent": "Indian",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India"
+  },
+  {
+    "short_name": "mr-IN-ManoharNeural",
+    "language": "Marathi",
+    "lang_code": "mr-IN",
+    "locale": "mr-IN",
+    "accent": "Indian",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India"
+  },
+  {
+    "short_name": "mn-MN-BataaNeural",
+    "language": "Mongolian",
+    "lang_code": "mn-MN",
+    "locale": "mn-MN",
+    "accent": "MN",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Mongolia"
+  },
+  {
+    "short_name": "mn-MN-YesuiNeural",
+    "language": "Mongolian",
+    "lang_code": "mn-MN",
+    "locale": "mn-MN",
+    "accent": "MN",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Mongolia"
+  },
+  {
+    "short_name": "ne-NP-HemkalaNeural",
+    "language": "Nepali",
+    "lang_code": "ne-NP",
+    "locale": "ne-NP",
+    "accent": "NP",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Nepal"
+  },
+  {
+    "short_name": "ne-NP-SagarNeural",
+    "language": "Nepali",
+    "lang_code": "ne-NP",
+    "locale": "ne-NP",
+    "accent": "NP",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Nepal"
+  },
+  {
+    "short_name": "nb-NO-FinnNeural",
+    "language": "Norwegian",
+    "lang_code": "nb-NO",
+    "locale": "nb-NO",
+    "accent": "NO",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Norway"
+  },
+  {
+    "short_name": "nb-NO-PernilleNeural",
+    "language": "Norwegian",
+    "lang_code": "nb-NO",
+    "locale": "nb-NO",
+    "accent": "NO",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Norway"
+  },
+  {
+    "short_name": "ps-AF-GulNawazNeural",
+    "language": "Pashto",
+    "lang_code": "ps-AF",
+    "locale": "ps-AF",
+    "accent": "AF",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Afghanistan"
+  },
+  {
+    "short_name": "ps-AF-LatifaNeural",
+    "language": "Pashto",
+    "lang_code": "ps-AF",
+    "locale": "ps-AF",
+    "accent": "AF",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Afghanistan"
+  },
+  {
+    "short_name": "fa-IR-DilaraNeural",
+    "language": "Persian",
+    "lang_code": "fa-IR",
+    "locale": "fa-IR",
+    "accent": "IR",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Iran"
+  },
+  {
+    "short_name": "fa-IR-FaridNeural",
+    "language": "Persian",
+    "lang_code": "fa-IR",
+    "locale": "fa-IR",
+    "accent": "IR",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Iran"
+  },
+  {
+    "short_name": "pl-PL-MarekNeural",
+    "language": "Polish",
+    "lang_code": "pl-PL",
+    "locale": "pl-PL",
+    "accent": "PL",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Poland"
+  },
+  {
+    "short_name": "pl-PL-ZofiaNeural",
+    "language": "Polish",
+    "lang_code": "pl-PL",
+    "locale": "pl-PL",
+    "accent": "PL",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Poland"
+  },
+  {
+    "short_name": "pt-BR-AntonioNeural",
+    "language": "Portuguese",
+    "lang_code": "pt-BR",
+    "locale": "pt-BR",
+    "accent": "BR",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Portugal/Brazil"
+  },
+  {
+    "short_name": "pt-BR-FranciscaNeural",
+    "language": "Portuguese",
+    "lang_code": "pt-BR",
+    "locale": "pt-BR",
+    "accent": "BR",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Portugal/Brazil"
+  },
+  {
+    "short_name": "pt-PT-DuarteNeural",
+    "language": "Portuguese",
+    "lang_code": "pt-PT",
+    "locale": "pt-PT",
+    "accent": "PT",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Portugal/Brazil"
+  },
+  {
+    "short_name": "pt-PT-RaquelNeural",
+    "language": "Portuguese",
+    "lang_code": "pt-PT",
+    "locale": "pt-PT",
+    "accent": "PT",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Portugal/Brazil"
+  },
+  {
+    "short_name": "ro-RO-AlinaNeural",
+    "language": "Romanian",
+    "lang_code": "ro-RO",
+    "locale": "ro-RO",
+    "accent": "RO",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Romania"
+  },
+  {
+    "short_name": "ro-RO-EmilNeural",
+    "language": "Romanian",
+    "lang_code": "ro-RO",
+    "locale": "ro-RO",
+    "accent": "RO",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Romania"
+  },
+  {
+    "short_name": "ru-RU-DmitryNeural",
+    "language": "Russian",
+    "lang_code": "ru-RU",
+    "locale": "ru-RU",
+    "accent": "RU",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Russia"
+  },
+  {
+    "short_name": "ru-RU-SvetlanaNeural",
+    "language": "Russian",
+    "lang_code": "ru-RU",
+    "locale": "ru-RU",
+    "accent": "RU",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Russia"
+  },
+  {
+    "short_name": "sr-RS-NicholasNeural",
+    "language": "Serbian",
+    "lang_code": "sr-RS",
+    "locale": "sr-RS",
+    "accent": "RS",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Serbia"
+  },
+  {
+    "short_name": "sr-RS-SophieNeural",
+    "language": "Serbian",
+    "lang_code": "sr-RS",
+    "locale": "sr-RS",
+    "accent": "RS",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Serbia"
+  },
+  {
+    "short_name": "si-LK-SameeraNeural",
+    "language": "Sinhala",
+    "lang_code": "si-LK",
+    "locale": "si-LK",
+    "accent": "LK",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Sri Lanka"
+  },
+  {
+    "short_name": "si-LK-ThiliniNeural",
+    "language": "Sinhala",
+    "lang_code": "si-LK",
+    "locale": "si-LK",
+    "accent": "LK",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Sri Lanka"
+  },
+  {
+    "short_name": "sk-SK-LukasNeural",
+    "language": "Slovak",
+    "lang_code": "sk-SK",
+    "locale": "sk-SK",
+    "accent": "SK",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Slovakia"
+  },
+  {
+    "short_name": "sk-SK-ViktoriaNeural",
+    "language": "Slovak",
+    "lang_code": "sk-SK",
+    "locale": "sk-SK",
+    "accent": "SK",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Slovakia"
+  },
+  {
+    "short_name": "sl-SI-PetraNeural",
+    "language": "Slovenian",
+    "lang_code": "sl-SI",
+    "locale": "sl-SI",
+    "accent": "SI",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Slovenia"
+  },
+  {
+    "short_name": "sl-SI-RokNeural",
+    "language": "Slovenian",
+    "lang_code": "sl-SI",
+    "locale": "sl-SI",
+    "accent": "SI",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Slovenia"
+  },
+  {
+    "short_name": "so-SO-MuuseNeural",
+    "language": "Somali",
+    "lang_code": "so-SO",
+    "locale": "so-SO",
+    "accent": "SO",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Somalia"
+  },
+  {
+    "short_name": "so-SO-UbaxNeural",
+    "language": "Somali",
+    "lang_code": "so-SO",
+    "locale": "so-SO",
+    "accent": "SO",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Somalia"
+  },
+  {
+    "short_name": "es-AR-ElenaNeural",
+    "language": "Spanish",
+    "lang_code": "es-AR",
+    "locale": "es-AR",
+    "accent": "AR",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-AR-TomasNeural",
+    "language": "Spanish",
+    "lang_code": "es-AR",
+    "locale": "es-AR",
+    "accent": "AR",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-BO-MarceloNeural",
+    "language": "Spanish",
+    "lang_code": "es-BO",
+    "locale": "es-BO",
+    "accent": "BO",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-BO-SofiaNeural",
+    "language": "Spanish",
+    "lang_code": "es-BO",
+    "locale": "es-BO",
+    "accent": "BO",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-CL-CatalinaNeural",
+    "language": "Spanish",
+    "lang_code": "es-CL",
+    "locale": "es-CL",
+    "accent": "CL",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-CL-LorenzoNeural",
+    "language": "Spanish",
+    "lang_code": "es-CL",
+    "locale": "es-CL",
+    "accent": "CL",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-CO-GonzaloNeural",
+    "language": "Spanish",
+    "lang_code": "es-CO",
+    "locale": "es-CO",
+    "accent": "CO",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-CO-SalomeNeural",
+    "language": "Spanish",
+    "lang_code": "es-CO",
+    "locale": "es-CO",
+    "accent": "CO",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-CR-JuanNeural",
+    "language": "Spanish",
+    "lang_code": "es-CR",
+    "locale": "es-CR",
+    "accent": "CR",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-CR-MariaNeural",
+    "language": "Spanish",
+    "lang_code": "es-CR",
+    "locale": "es-CR",
+    "accent": "CR",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-CU-BelkysNeural",
+    "language": "Spanish",
+    "lang_code": "es-CU",
+    "locale": "es-CU",
+    "accent": "CU",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-CU-ManuelNeural",
+    "language": "Spanish",
+    "lang_code": "es-CU",
+    "locale": "es-CU",
+    "accent": "CU",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-DO-EmilioNeural",
+    "language": "Spanish",
+    "lang_code": "es-DO",
+    "locale": "es-DO",
+    "accent": "DO",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-DO-RamonaNeural",
+    "language": "Spanish",
+    "lang_code": "es-DO",
+    "locale": "es-DO",
+    "accent": "DO",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-EC-AndreaNeural",
+    "language": "Spanish",
+    "lang_code": "es-EC",
+    "locale": "es-EC",
+    "accent": "EC",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-EC-LuisNeural",
+    "language": "Spanish",
+    "lang_code": "es-EC",
+    "locale": "es-EC",
+    "accent": "EC",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-SV-LorenaNeural",
+    "language": "Spanish",
+    "lang_code": "es-SV",
+    "locale": "es-SV",
+    "accent": "SV",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-SV-RodrigoNeural",
+    "language": "Spanish",
+    "lang_code": "es-SV",
+    "locale": "es-SV",
+    "accent": "SV",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-GQ-JavierNeural",
+    "language": "Spanish",
+    "lang_code": "es-GQ",
+    "locale": "es-GQ",
+    "accent": "GQ",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-GQ-TeresaNeural",
+    "language": "Spanish",
+    "lang_code": "es-GQ",
+    "locale": "es-GQ",
+    "accent": "GQ",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-GT-AndresNeural",
+    "language": "Spanish",
+    "lang_code": "es-GT",
+    "locale": "es-GT",
+    "accent": "GT",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-GT-MartaNeural",
+    "language": "Spanish",
+    "lang_code": "es-GT",
+    "locale": "es-GT",
+    "accent": "GT",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-HN-CarlosNeural",
+    "language": "Spanish",
+    "lang_code": "es-HN",
+    "locale": "es-HN",
+    "accent": "HN",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-HN-KarlaNeural",
+    "language": "Spanish",
+    "lang_code": "es-HN",
+    "locale": "es-HN",
+    "accent": "HN",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-MX-DaliaNeural",
+    "language": "Spanish",
+    "lang_code": "es-MX",
+    "locale": "es-MX",
+    "accent": "MX",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-MX-JorgeNeural",
+    "language": "Spanish",
+    "lang_code": "es-MX",
+    "locale": "es-MX",
+    "accent": "MX",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-MX-LorenzoEsCLNeural",
+    "language": "Spanish",
+    "lang_code": "es-MX",
+    "locale": "es-MX",
+    "accent": "MX",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-NI-FedericoNeural",
+    "language": "Spanish",
+    "lang_code": "es-NI",
+    "locale": "es-NI",
+    "accent": "NI",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-NI-YolandaNeural",
+    "language": "Spanish",
+    "lang_code": "es-NI",
+    "locale": "es-NI",
+    "accent": "NI",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-PA-MargaritaNeural",
+    "language": "Spanish",
+    "lang_code": "es-PA",
+    "locale": "es-PA",
+    "accent": "PA",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-PA-RobertoNeural",
+    "language": "Spanish",
+    "lang_code": "es-PA",
+    "locale": "es-PA",
+    "accent": "PA",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-PY-MarioNeural",
+    "language": "Spanish",
+    "lang_code": "es-PY",
+    "locale": "es-PY",
+    "accent": "PY",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-PY-TaniaNeural",
+    "language": "Spanish",
+    "lang_code": "es-PY",
+    "locale": "es-PY",
+    "accent": "PY",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-PE-AlexNeural",
+    "language": "Spanish",
+    "lang_code": "es-PE",
+    "locale": "es-PE",
+    "accent": "PE",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-PE-CamilaNeural",
+    "language": "Spanish",
+    "lang_code": "es-PE",
+    "locale": "es-PE",
+    "accent": "PE",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-PR-KarinaNeural",
+    "language": "Spanish",
+    "lang_code": "es-PR",
+    "locale": "es-PR",
+    "accent": "PR",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-PR-VictorNeural",
+    "language": "Spanish",
+    "lang_code": "es-PR",
+    "locale": "es-PR",
+    "accent": "PR",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-ES-AlvaroNeural",
+    "language": "Spanish",
+    "lang_code": "es-ES",
+    "locale": "es-ES",
+    "accent": "ES",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-ES-ElviraNeural",
+    "language": "Spanish",
+    "lang_code": "es-ES",
+    "locale": "es-ES",
+    "accent": "ES",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-ES-ManuelEsCUNeural",
+    "language": "Spanish",
+    "lang_code": "es-ES",
+    "locale": "es-ES",
+    "accent": "ES",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-US-AlonsoNeural",
+    "language": "Spanish",
+    "lang_code": "es-US",
+    "locale": "es-US",
+    "accent": "American",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-US-PalomaNeural",
+    "language": "Spanish",
+    "lang_code": "es-US",
+    "locale": "es-US",
+    "accent": "American",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-UY-MateoNeural",
+    "language": "Spanish",
+    "lang_code": "es-UY",
+    "locale": "es-UY",
+    "accent": "UY",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-UY-ValentinaNeural",
+    "language": "Spanish",
+    "lang_code": "es-UY",
+    "locale": "es-UY",
+    "accent": "UY",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-VE-PaolaNeural",
+    "language": "Spanish",
+    "lang_code": "es-VE",
+    "locale": "es-VE",
+    "accent": "VE",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "es-VE-SebastianNeural",
+    "language": "Spanish",
+    "lang_code": "es-VE",
+    "locale": "es-VE",
+    "accent": "VE",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Spanish-speaking Regions"
+  },
+  {
+    "short_name": "su-ID-JajangNeural",
+    "language": "su",
+    "lang_code": "su-ID",
+    "locale": "su-ID",
+    "accent": "ID",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Unknown"
+  },
+  {
+    "short_name": "su-ID-TutiNeural",
+    "language": "su",
+    "lang_code": "su-ID",
+    "locale": "su-ID",
+    "accent": "ID",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Unknown"
+  },
+  {
+    "short_name": "sw-KE-RafikiNeural",
+    "language": "Swahili",
+    "lang_code": "sw-KE",
+    "locale": "sw-KE",
+    "accent": "KE",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "East Africa"
+  },
+  {
+    "short_name": "sw-KE-ZuriNeural",
+    "language": "Swahili",
+    "lang_code": "sw-KE",
+    "locale": "sw-KE",
+    "accent": "KE",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "East Africa"
+  },
+  {
+    "short_name": "sw-TZ-DaudiNeural",
+    "language": "Swahili",
+    "lang_code": "sw-TZ",
+    "locale": "sw-TZ",
+    "accent": "TZ",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "East Africa"
+  },
+  {
+    "short_name": "sw-TZ-RehemaNeural",
+    "language": "Swahili",
+    "lang_code": "sw-TZ",
+    "locale": "sw-TZ",
+    "accent": "TZ",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "East Africa"
+  },
+  {
+    "short_name": "sv-SE-MattiasNeural",
+    "language": "Swedish",
+    "lang_code": "sv-SE",
+    "locale": "sv-SE",
+    "accent": "SE",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Sweden"
+  },
+  {
+    "short_name": "sv-SE-SofieNeural",
+    "language": "Swedish",
+    "lang_code": "sv-SE",
+    "locale": "sv-SE",
+    "accent": "SE",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Sweden"
+  },
+  {
+    "short_name": "ta-IN-PallaviNeural",
+    "language": "Tamil",
+    "lang_code": "ta-IN",
+    "locale": "ta-IN",
+    "accent": "Indian",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India/Sri Lanka"
+  },
+  {
+    "short_name": "ta-IN-ValluvarNeural",
+    "language": "Tamil",
+    "lang_code": "ta-IN",
+    "locale": "ta-IN",
+    "accent": "Indian",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India/Sri Lanka"
+  },
+  {
+    "short_name": "ta-MY-KaniNeural",
+    "language": "Tamil",
+    "lang_code": "ta-MY",
+    "locale": "ta-MY",
+    "accent": "MY",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India/Sri Lanka"
+  },
+  {
+    "short_name": "ta-MY-SuryaNeural",
+    "language": "Tamil",
+    "lang_code": "ta-MY",
+    "locale": "ta-MY",
+    "accent": "MY",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India/Sri Lanka"
+  },
+  {
+    "short_name": "ta-SG-AnbuNeural",
+    "language": "Tamil",
+    "lang_code": "ta-SG",
+    "locale": "ta-SG",
+    "accent": "SG",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India/Sri Lanka"
+  },
+  {
+    "short_name": "ta-SG-VenbaNeural",
+    "language": "Tamil",
+    "lang_code": "ta-SG",
+    "locale": "ta-SG",
+    "accent": "SG",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India/Sri Lanka"
+  },
+  {
+    "short_name": "ta-LK-KumarNeural",
+    "language": "Tamil",
+    "lang_code": "ta-LK",
+    "locale": "ta-LK",
+    "accent": "LK",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India/Sri Lanka"
+  },
+  {
+    "short_name": "ta-LK-SaranyaNeural",
+    "language": "Tamil",
+    "lang_code": "ta-LK",
+    "locale": "ta-LK",
+    "accent": "LK",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India/Sri Lanka"
+  },
+  {
+    "short_name": "te-IN-MohanNeural",
+    "language": "Telugu",
+    "lang_code": "te-IN",
+    "locale": "te-IN",
+    "accent": "Indian",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India"
+  },
+  {
+    "short_name": "te-IN-ShrutiNeural",
+    "language": "Telugu",
+    "lang_code": "te-IN",
+    "locale": "te-IN",
+    "accent": "Indian",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "India"
+  },
+  {
+    "short_name": "th-TH-NiwatNeural",
+    "language": "Thai",
+    "lang_code": "th-TH",
+    "locale": "th-TH",
+    "accent": "TH",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Thailand"
+  },
+  {
+    "short_name": "th-TH-PremwadeeNeural",
+    "language": "Thai",
+    "lang_code": "th-TH",
+    "locale": "th-TH",
+    "accent": "TH",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Thailand"
+  },
+  {
+    "short_name": "tr-TR-AhmetNeural",
+    "language": "Turkish",
+    "lang_code": "tr-TR",
+    "locale": "tr-TR",
+    "accent": "TR",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Turkey"
+  },
+  {
+    "short_name": "tr-TR-EmelNeural",
+    "language": "Turkish",
+    "lang_code": "tr-TR",
+    "locale": "tr-TR",
+    "accent": "TR",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Turkey"
+  },
+  {
+    "short_name": "uk-UA-OstapNeural",
+    "language": "Ukrainian",
+    "lang_code": "uk-UA",
+    "locale": "uk-UA",
+    "accent": "UA",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Ukraine"
+  },
+  {
+    "short_name": "uk-UA-PolinaNeural",
+    "language": "Ukrainian",
+    "lang_code": "uk-UA",
+    "locale": "uk-UA",
+    "accent": "UA",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Ukraine"
+  },
+  {
+    "short_name": "ur-IN-GulNeural",
+    "language": "Urdu",
+    "lang_code": "ur-IN",
+    "locale": "ur-IN",
+    "accent": "Indian",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Pakistan/India"
+  },
+  {
+    "short_name": "ur-IN-SalmanNeural",
+    "language": "Urdu",
+    "lang_code": "ur-IN",
+    "locale": "ur-IN",
+    "accent": "Indian",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Pakistan/India"
+  },
+  {
+    "short_name": "ur-PK-AsadNeural",
+    "language": "Urdu",
+    "lang_code": "ur-PK",
+    "locale": "ur-PK",
+    "accent": "PK",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Pakistan/India"
+  },
+  {
+    "short_name": "ur-PK-UzmaNeural",
+    "language": "Urdu",
+    "lang_code": "ur-PK",
+    "locale": "ur-PK",
+    "accent": "PK",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Pakistan/India"
+  },
+  {
+    "short_name": "uz-UZ-MadinaNeural",
+    "language": "Uzbek",
+    "lang_code": "uz-UZ",
+    "locale": "uz-UZ",
+    "accent": "UZ",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Uzbekistan"
+  },
+  {
+    "short_name": "uz-UZ-SardorNeural",
+    "language": "Uzbek",
+    "lang_code": "uz-UZ",
+    "locale": "uz-UZ",
+    "accent": "UZ",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Uzbekistan"
+  },
+  {
+    "short_name": "vi-VN-HoaiMyNeural",
+    "language": "Vietnamese",
+    "lang_code": "vi-VN",
+    "locale": "vi-VN",
+    "accent": "VN",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Vietnam"
+  },
+  {
+    "short_name": "vi-VN-NamMinhNeural",
+    "language": "Vietnamese",
+    "lang_code": "vi-VN",
+    "locale": "vi-VN",
+    "accent": "VN",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Vietnam"
+  },
+  {
+    "short_name": "cy-GB-AledNeural",
+    "language": "cy",
+    "lang_code": "cy-GB",
+    "locale": "cy-GB",
+    "accent": "British",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Unknown"
+  },
+  {
+    "short_name": "cy-GB-NiaNeural",
+    "language": "cy",
+    "lang_code": "cy-GB",
+    "locale": "cy-GB",
+    "accent": "British",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Unknown"
+  },
+  {
+    "short_name": "zu-ZA-ThandoNeural",
+    "language": "zu",
+    "lang_code": "zu-ZA",
+    "locale": "zu-ZA",
+    "accent": "ZA",
+    "gender": "Female",
+    "style_tags": [
+      "friendly",
+      "neural",
+      "soft"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Unknown"
+  },
+  {
+    "short_name": "zu-ZA-ThembaNeural",
+    "language": "zu",
+    "lang_code": "zu-ZA",
+    "locale": "zu-ZA",
+    "accent": "ZA",
+    "gender": "Male",
+    "style_tags": [
+      "clear",
+      "neural",
+      "professional"
+    ],
+    "use_cases": [],
+    "energy": "medium",
+    "emotion": "neutral",
+    "quality_rating": 8.5,
+    "primary_country": "Unknown"
+  }
+]
