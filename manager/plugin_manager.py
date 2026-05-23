@@ -175,7 +175,7 @@ class PluginManager:
             # fallback response
             fallback_response = self.general_chat(cleaned_query)
 
-            print("\n[Vedas Response]")
+            print("\n[Vedas Response fallback 1]")
             print("----------------")
             print(fallback_response)
             print("----------------\n")
@@ -193,7 +193,7 @@ class PluginManager:
 
             fallback_response = self.general_chat(cleaned_query)
 
-            print("\n[Vedas Response]")
+            print("\n[Vedas Response fallback 2]")
             print("----------------")
             print(fallback_response)
             print("----------------\n")
@@ -231,7 +231,7 @@ class PluginManager:
 
         final_output = self.synthesize_response(cleaned_query, outputs)
 
-        print("\n[Vedas Response]")
+        print("\n[Vedas Response final]")
         print("----------------")
         print(final_output)
         print("----------------\n")
@@ -331,6 +331,7 @@ class PluginManager:
             - Keep dark humor subtle, not disturbing
             - Combine tool outputs into ONE response
             - Do NOT list outputs separately
+            - Do not give any emoji's in response
         """
 
         user_prompt = f"""
@@ -375,6 +376,7 @@ class PluginManager:
             - smart
             - sarcastic
             - dark
+            - smart
 
             Rules:
             - Be natural and context-aware
@@ -427,6 +429,7 @@ class PluginManager:
             - casual
             - sarcastic
             - dark
+            - smart
         """
 
         response = self.ask_llm(prompt, temperature=0)
@@ -484,6 +487,7 @@ class PluginManager:
             INSTRUCTIONS:
             - Respond in short answers only
             - Respond in brief only if the users asks to
+            - Do not give any emoji's in answer
             
             User profile:
             {profile}
