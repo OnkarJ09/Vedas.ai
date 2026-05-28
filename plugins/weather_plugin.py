@@ -54,8 +54,9 @@ class Vedas:
         temperature = str(data["main"]["temp"])
 
 
-        return temperature + (" Instruction - The given value is the weather details, "
-                              "- add few words don't do much of elaboration combine it and return the response")
+        return temperature + (" Instruction - The given value is the weather details. "
+                              "- add few words don't do much of elaboration combine it and return the response. "
+                              f"- the metric is {DEFAULT_WEATHER_UNIT},")
 
 
     def get_city_coordinates(self, city=DEFAULT_CITY):
