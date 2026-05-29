@@ -35,4 +35,5 @@ if __name__ == "__main__":
     while True:
         # Execute plugins/tools based on user input/queries
         query = asyncio.run(take_command())
+        # query = str(input("> "))      # For testing without voice input
         plugin_manager.execute_pipeline(query)
