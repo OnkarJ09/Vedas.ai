@@ -27,8 +27,8 @@ class Vedas:
 
     def run(self, *args, **kwargs):
             # For debugging: print received input data and query
-            print(f"[{self.name}] received input_data:", args)
-            print(f"[{self.name}] last_query:", repr(self.last_query))
+            # print(f"[{self.name}] received input_data:", args)
+            # print(f"[{self.name}] last_query:", repr(self.last_query))
 
             # Call the weather function to get weather data
             weather_data = self.weather()
