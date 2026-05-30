@@ -1,4 +1,5 @@
 import webbrowser
+import pywhatkit
 
 class Ytvdoplayer(Exception):
     pass
@@ -13,6 +14,8 @@ class Vedas:
         self.keywords = [
             "youtube", "search on youtube", "search youtube for",
             "search on yt", "search on yt for", "yt", "youtube for"
+            "play on youtube", "play on youtube for", "play on yt for",
+            "play on yt"
         ]
 
         self.dependencies = []  # Dependencies for the plugin (e.g., external libraries, APIs)
@@ -43,8 +46,27 @@ class Vedas:
             webbrowser.open(url_link)
             return f"Trying to search {query} on youtube..."
         except Ytvdoplayer:
-            print("Sorry!! Please Try Again")
+            return "Sorry!! Please Try Again"
+
+    def youtube_video_player(self, video_name: str, **kwargs):
+        query = video_name.lower()
+
+        # Replace the match keywords with empty string to get the actual user query
+        for keyword in self.keywords:
+            if keyword in query:
+                query = query.replace(keyword, "")
+
+        # Try to play the requested video on YouTube using pywhatkit
+        try:
+            pywhatkit.playonyt(query)
+            return f"Trying to search {query} on youtube..."
+        except Ytvdoplayer:
             return "Sorry!! Please Try Again"
 
     def __str__(self):
         return str(self.keywords)
+
+
+if __name__ == "__main__":
+    print(Vedas().youtube_search("search on youtube for the latest music videos"))
+    print(Vedas().youtube_video_player("play illahi on youtube"))
