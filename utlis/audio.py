@@ -1,9 +1,21 @@
 from manager.env_manager import DEFAULT_VOICE
-from playsound3 import playsound
+try:
+    from playsound3 import playsound
+except ImportError:
+    from playsound import playsound
 import edge_tts
 import asyncio
 from pathlib import Path
-import fasttext
+from ctypes import CFUNCTYPE, c_char_p, c_int, cdll
+
+# Suppress ALSA C library stderr warnings on Linux
+try:
+    _asound = cdll.LoadLibrary('libasound.so.2')
+    _c_handler = CFUNCTYPE(None, c_char_p, c_int, c_char_p, c_int, c_char_p)(lambda *_: None)
+    _asound.snd_lib_error_set_handler(_c_handler)
+except Exception:
+    pass
+
 import pyaudio
 import speech_recognition as sr
 
@@ -107,9 +119,15 @@ async def take_command(lang="en"):
 
     with sr.Microphone() as source:
         print("listening...")
-        recognizer.pause_threshold = 0.5
-        recognizer.adjust_for_ambient_noise(source, duration=0.2)
-        audio = recognizer.listen(source)
+        # shortcut: 1.0s pause threshold accommodates natural pauses/breathing; 25s phrase limit allows long prompts
+        recognizer.pause_threshold = 1.0
+        recognizer.energy_threshold = 300
+        recognizer.dynamic_energy_threshold = True
+        recognizer.adjust_for_ambient_noise(source, duration=0.3)
+        try:
+            audio = recognizer.listen(source, timeout=None, phrase_time_limit=25)
+        except sr.WaitTimeoutError:
+            return ""
 
     try:
         query = recognizer.recognize_google(audio, language=lang)

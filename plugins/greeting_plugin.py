@@ -11,7 +11,8 @@ class Vedas:
 
         self.keywords = [
             "hello", "hey", "hii", "hi",
-            "morning", "afternoon", "evening", "night"
+            "morning", "afternoon", "evening", "night",
+            "how are you", "how are u", "how's it going"
         ]
 
         self.dependencies = []
@@ -50,20 +51,16 @@ class Vedas:
         print(f"[{self.name}] received:", input_data)
 
         query = (self.last_query or input_data or "").lower()
-
-        # Greeting detection
         clean_query = query.strip().lower()
 
-        #-------------------------------------------------------
-        # print("[DEBUG] query =", repr(query))     # For debugging
-        # -------------------------------------------------------
+        # Handle 'how are you' variations directly
+        if any(p in clean_query for p in ["how are you", "how are u", "how's it going", "how is it going"]):
+            return f"I'm doing great, {DEFAULT_USER}! Ready to help. What's on your mind?"
 
         if clean_query in ["hi", "hello", "hey", "heyy", "hii"]:
-            # return "hello, USER"
             return f"{DEFAULT_USER} {self.greet()} {random.choice(self.greetings)}"
 
         if any(clean_query.startswith(k + " ") for k in ["hi", "hello", "hey", "heyy", "hii"]):
-            # return "hello, USER"
             return f"{DEFAULT_USER} {self.greet()} {random.choice(self.greetings)}"
 
         return None
