@@ -1,5 +1,5 @@
 from manager.env_manager import DEFAULT_VOICE
-from playsound import playsound
+from playsound3 import playsound
 import edge_tts
 import asyncio
 from pathlib import Path
@@ -108,7 +108,7 @@ async def take_command(lang="en"):
     with sr.Microphone() as source:
         print("listening...")
         recognizer.pause_threshold = 0.5
-        recognizer.adjust_for_ambient_noise(source)
+        recognizer.adjust_for_ambient_noise(source, duration=0.2)
         audio = recognizer.listen(source)
 
     try:

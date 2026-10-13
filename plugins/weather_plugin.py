@@ -36,27 +36,28 @@ class Vedas:
             return weather_data
 
     def weather(self, city=DEFAULT_CITY):
-        # get the latitude and longitude from the .env file
+        # shortcut: queries city name directly to bypass geocode.xyz; uses lat/long if configured
         latitude, longitude = DEFAULT_LATITUDE, DEFAULT_LONGITUDE
 
-        # get the co-ordinates for the city if not found
-        if not latitude or not longitude:
-            latitude, longitude = self.get_city_coordinates(city)
+        try:
+            if latitude and longitude:
+                base_url = (
+                    f"https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={OPEN_WEATHER_API_KEY}&units={DEFAULT_WEATHER_UNIT}&lang={DEFAULT_LANGUAGE_CODE}")
+            else:
+                base_url = (
+                    f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={OPEN_WEATHER_API_KEY}&units={DEFAULT_WEATHER_UNIT}&lang={DEFAULT_LANGUAGE_CODE}")
 
-        # URL to get the weather data from the OpenWeather API using the latitude and longitude
-        BASE_URL = (
-            f"https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={OPEN_WEATHER_API_KEY}&units={DEFAULT_WEATHER_UNIT}&lang={DEFAULT_LANGUAGE_CODE}")
+            response = requests.get(base_url, timeout=5)
+            data = response.json()
 
-        response = requests.get(BASE_URL)
-        data = response.json()      # Load data into json form
-
-        # Sort what is needed by the user like temperature, humidity, and other
-        temperature = str(data["main"]["temp"])
-
-
-        return temperature + (" Instruction - The given value is the weather details. "
-                              "- add few words don't do much of elaboration combine it and return the response. "
-                              f"- the metric is {DEFAULT_WEATHER_UNIT},")
+            if "main" in data and "temp" in data["main"]:
+                temperature = str(data["main"]["temp"])
+                return temperature + (" Instruction - The given value is the weather details. "
+                                      "- add few words don't do much of elaboration combine it and return the response. "
+                                      f"- the metric is {DEFAULT_WEATHER_UNIT},")
+            return f"Weather data currently unavailable for {city}."
+        except Exception as e:
+            return f"Could not fetch weather: {e}"
 
 
     def get_city_coordinates(self, city=DEFAULT_CITY):

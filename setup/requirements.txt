@@ -1,0 +1,18 @@
+# Core & Environment
+openai>=1.0.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Voice & Audio (STT & TTS)
+# Note for Linux: PyAudio requires system package 'portaudio19-dev' (Debian/Ubuntu) or 'portaudio' (Arch/Fedora)
+SpeechRecognition>=3.10.0
+PyAudio>=0.2.14
+edge-tts>=6.1.0
+playsound3>=1.2.2
+
+# Plugins & Automation
+wikipedia>=1.4.0
+pywhatkit>=5.4.0
+
+# Language Detection (used in utlis/audio.py)
+fasttext-wheel>=0.9.2

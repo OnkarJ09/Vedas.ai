@@ -1,5 +1,4 @@
 import webbrowser
-import pywhatkit
 
 class Ytvdoplayer(Exception):
     pass
@@ -89,9 +88,10 @@ class Vedas:
 
         # Try to play the requested video on YouTube using pywhatkit
         try:
+            import pywhatkit
             pywhatkit.playonyt(query)
             return f"Trying to play {query} on youtube..."
-        except Ytvdoplayer:
+        except Exception:
             return "Sorry!! Please Try Again"
 
     def replacement(self, query):

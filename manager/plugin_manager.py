@@ -142,103 +142,78 @@ class PluginManager:
         return selected
 
     def execute_pipeline(self, query):
-        # For user query into memory records
+        if not query or not query.strip():
+            return None
+
+        # Record user query into memory
         self.memory.add_short_term_memory("user", query)
-
-        analysis = self.analyze_intent(query)
-
-        cleaned_query = analysis["cleaned"]
-
-        self.tone = analysis.get("tone", "smart")
-        self.personality = analysis.get("personality", "vedas")
-
+        cleaned_query = normalize_text(query)
         print("[DEBUG] Normalized query:", cleaned_query)
 
         state = AgentState(cleaned_query)
-
-        # ---------------------
         shortlisted_tools = self.shortlist_plugins(cleaned_query)
+
+        # Fast-path: deterministic tools return immediately without LLM
+        # shortcut: only single direct tools are fast-pathed; composite intents use the planner
+        fast_tools = {"greeting_plugin", "datetime_plugin", "system_info_plugin", "youtube_plugin", "web_search_plugin"}
+        if len(shortlisted_tools) == 1 and shortlisted_tools[0] in fast_tools:
+            output = self.run_plugin(shortlisted_tools[0], state, {"input_data": cleaned_query})
+            if output:
+                print("\n[Vedas Response]")
+                print("----------------")
+                print(output)
+                print("----------------\n")
+                self.memory.add_short_term_memory("vedas", output)
+                return output
+
         if not shortlisted_tools:
             print("[DEBUG] No tools matched using fallback intelligence")
 
-            # 🧠 try extracting memory
-            memory_data = self.extract_memory(cleaned_query)
+            # Extract memory only if query hints at personal preference/identity
+            personal_cues = ("my name is", "i am ", "call me", "i like", "i prefer", "my alias")
+            if any(cue in cleaned_query.lower() for cue in personal_cues):
+                memory_data = self.extract_memory(cleaned_query)
+                if memory_data.get("type"):
+                    self.memory.update_profile(memory_data["type"], memory_data["value"])
+                    print("[MEMORY] Updated profile:", self.memory.get_profile())
 
-            if memory_data["type"]:
-                self.memory.update_profile(
-                    memory_data["type"],
-                    memory_data["value"]
-                )
-
-                print("[MEMORY] Updated profile:", self.memory.get_profile())
-
-            # fallback response
             fallback_response = self.general_chat(cleaned_query)
-
             print("\n[Vedas Response]")
             print("----------------")
             print(fallback_response)
             print("----------------\n")
-
+            self.memory.add_short_term_memory("vedas", fallback_response)
             return fallback_response
 
         print("[Vedas] Shortlisted:", shortlisted_tools)
 
-        tools_meta = self.get_tools_metadata(shortlisted_tools)
+        # Single tool with synthesis skips planner; multi-tools use planner
+        if len(shortlisted_tools) == 1:
+            plugin_name = shortlisted_tools[0]
+            result = self.run_plugin(plugin_name, state, {"input_data": cleaned_query})
+            outputs = [result] if result else []
+        else:
+            tools_meta = self.get_tools_metadata(shortlisted_tools)
+            plan = self.get_plan_from_llm(cleaned_query, tools_meta)
+            if not plan:
+                fallback_response = self.general_chat(cleaned_query)
+                self.memory.add_short_term_memory("vedas", fallback_response)
+                return fallback_response
 
-        plan = self.get_plan_from_llm(cleaned_query, tools_meta)
-        # If no plan is there then the AI takes over!!
-        if not plan:
-            print("[DEBUG] Planner returned empty plan, fallback chat")
-
-            fallback_response = self.general_chat(cleaned_query)
-
-            print("\n[Vedas Response]")
-            print("----------------")
-            print(fallback_response)
-            print("----------------\n")
-
-            self.memory.add_short_term_memory("vedas", fallback_response)
-
-            return fallback_response
-
-        print("[Vedas] Plan:", plan)
-
-        outputs = []
-
-        for step in plan:
-            tool_name = step["tool"]
-            args = step.get("args", {})
-
-            plugin_name = self.tool_map.get(tool_name)
-            if not plugin_name:
-                print(f"[ERROR] Tool '{tool_name}' not mapped")
-                continue
-
-            result = self.run_plugin(plugin_name, state, args)
-
-            if result:
-                outputs.append(result)
-
-        print("[Vedas] Final output:", state.last_output)
-
-        mode = self.decide_mode(cleaned_query, state, outputs)
-
-        self.personality = mode.get("personality", "vedas")
-        self.tone = mode.get("tone", "smart")
-
-        print("[DEBUG] Mode selected:", self.personality, "|", self.tone)
+            outputs = []
+            for step in plan:
+                plugin_name = self.tool_map.get(step.get("tool"))
+                if plugin_name:
+                    res = self.run_plugin(plugin_name, state, step.get("args", {}))
+                    if res:
+                        outputs.append(res)
 
         final_output = self.synthesize_response(cleaned_query, outputs)
-
         print("\n[Vedas Response]")
         print("----------------")
         print(final_output)
         print("----------------\n")
-
-        # To record Ai output into memory records
         self.memory.add_short_term_memory("vedas", final_output)
-
         return final_output
 
     def safe_json_parse(self, text):
@@ -275,7 +250,7 @@ class PluginManager:
         """
 
         response = self.client.chat.completions.create(
-            model="openai/gpt-oss-120b",
+            model=self.model,
             messages=[{
                 "role": "user",
                 "content": f"{prompt}"
@@ -432,8 +407,14 @@ class PluginManager:
         response = self.ask_llm(prompt, temperature=0)
 
         try:
-            return json.loads(response) + {
-                "cleaned": f"{normalized_query: 'cleaned'}"
+            data = json.loads(response)
+            if isinstance(data, dict):
+                data["cleaned"] = normalized_query
+                return data
+            return {
+                "cleaned": normalized_query,
+                "tone": "smart",
+                "personality": "vedas",
             }
         except:
             return {
