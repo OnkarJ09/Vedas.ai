@@ -4,10 +4,10 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-load_dotenv(BASE_DIR / "runtime" / ".env")
+load_dotenv(BASE_DIR / "runtime" / ".env", override=True)
 
 # PERSONAL INFORMATION
-DEFAULT_USER = os.getenv("USER")
+DEFAULT_USER = os.getenv("USERNAME")
 
 # API KEYS
 OPENAI_API_KEY = os.getenv("OPENAI")
