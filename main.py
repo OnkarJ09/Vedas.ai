@@ -4,7 +4,7 @@ Removing the mcp-use...
 Now using a custom framework and a custom manager to integrate the same behavior as the mcp-use!!!
 """
 from manager.plugin_manager import PluginManager
-from utlis.audio import take_command
+from utlis.audio import take_command, say
 import asyncio
 
 """
@@ -38,4 +38,6 @@ if __name__ == "__main__":
         # query = str(input("> "))      # For testing without voice input
         if not query or not query.strip():
             continue
-        plugin_manager.execute_pipeline(query)
+        response = plugin_manager.execute_pipeline(query)
+        if response:
+            asyncio.run(say(response))

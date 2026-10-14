@@ -22,6 +22,8 @@ class PluginManager:
         self.client = OpenAI(
             base_url="https://integrate.api.nvidia.com/v1",
             api_key=OPENAI_API_KEY,
+            timeout=10.0,
+            max_retries=0
         )
         self.model = SMALL_OPENAI_MODEL     # The default model is OpenAI's small 20B model
         self.personality = "vedas"
@@ -133,11 +135,20 @@ class PluginManager:
 
     def shortlist_plugins(self, query):
         selected = []
+        query_lower = query.lower().strip()
 
         for name, plugin in self.plugins.items():
+            # Check standalone words first if defined by plugin (exact match for 1-word queries)
+            if hasattr(plugin, "standalone_words") and query_lower in plugin.standalone_words:
+                selected.append(name)
+                continue
+
             if hasattr(plugin, "keywords"):
-                if any(k in query.lower() for k in plugin.keywords):
-                    selected.append(name)
+                for k in plugin.keywords:
+                    # shortcut: word-boundary regex ensures 'hi' doesn't match 'nothing' or 'think'
+                    if re.search(r'\b' + re.escape(k.lower()) + r'\b', query_lower):
+                        selected.append(name)
+                        break
 
         return selected
 
@@ -168,6 +179,23 @@ class PluginManager:
 
         if not shortlisted_tools:
             print("[DEBUG] No tools matched using fallback intelligence")
+
+            # Fast-path: instant return for conversational history questions directly from RAM
+            user_queries = [m["content"] for m in self.memory.short_term_memory if m.get("role") == "user"]
+            first_cues = ("first question", "first prompt", "first message", "first query")
+            prev_cues = ("last question", "previous question", "last message", "previous message", "last prompt")
+            if any(cue in cleaned_query for cue in first_cues):
+                if len(user_queries) > 1:
+                    output = f"Your first message was: {user_queries[0]}"
+                    print(f"\n[Vedas Response]\n----------------\n{output}\n----------------\n")
+                    self.memory.add_short_term_memory("vedas", output)
+                    return output
+            elif any(cue in cleaned_query for cue in prev_cues):
+                if len(user_queries) > 1:
+                    output = f"Your previous message was: {user_queries[-2]}"
+                    print(f"\n[Vedas Response]\n----------------\n{output}\n----------------\n")
+                    self.memory.add_short_term_memory("vedas", output)
+                    return output
 
             # Extract memory only if query hints at personal preference/identity
             personal_cues = ("my name is", "i am ", "call me", "i like", "i prefer", "my alias")
@@ -207,6 +235,15 @@ class PluginManager:
                     res = self.run_plugin(plugin_name, state, step.get("args", {}))
                     if res:
                         outputs.append(res)
+
+        if not outputs:
+            fallback_response = self.general_chat(cleaned_query)
+            print("\n[Vedas Response]")
+            print("----------------")
+            print(fallback_response)
+            print("----------------\n")
+            self.memory.add_short_term_memory("vedas", fallback_response)
+            return fallback_response
 
         final_output = self.synthesize_response(cleaned_query, outputs)
         print("\n[Vedas Response]")
@@ -255,7 +292,9 @@ class PluginManager:
                 "role": "user",
                 "content": f"{prompt}"
             }],
-            temperature=0
+            temperature=0,
+            max_tokens=256,
+            timeout=10
         )
 
         content = response.choices[0].message.content
@@ -456,31 +495,27 @@ class PluginManager:
             return {"type": None, "value": None}
 
     def general_chat(self, query):
-        recent_context = self.memory.get_recent_context()
         profile = self.memory.get_profile()
+        profile_str = f" User profile: {profile}." if profile else ""
 
-        prompt = f"""
-            You are Vedas, an intelligent AI assistant.
-        
-            INSTRUCTIONS:
-            - Respond in short answers only
-            - Respond in brief only if the users asks to
-            
-            User profile:
-            {profile}
-        
-            Recent conversation:
-            {recent_context}
-        
-            User:
-            {query}
-        
-            Respond naturally and intelligently.
-        """
+        messages = [
+            {
+                "role": "system",
+                "content": f"You are Vedas, an intelligent AI desktop companion. Speak naturally, directly, and concisely.{profile_str}"
+            }
+        ]
 
-        response = self.ask_llm(prompt, temperature=0.7)
+        # Multi-turn conversational memory: pass prior turns cleanly as user/assistant
+        history = self.memory.short_term_memory
+        for turn in history[:-1]:
+            role = "assistant" if turn.get("role") == "vedas" else "user"
+            content = turn.get("content", "")
+            if content:
+                messages.append({"role": role, "content": content})
 
-        return response
+        messages.append({"role": "user", "content": query})
+
+        return self.ask_llm(messages=messages, temperature=0.7)
 
     def get_tools_metadata(self, tool_names):
         tools = []
@@ -494,21 +529,26 @@ class PluginManager:
 
         return tools
 
-    def ask_llm(self, prompt, temperature=0.7, system_prompt=None):
-        additional_message = {'role': 'system', 'content': system_prompt}
+    def ask_llm(self, prompt=None, temperature=0.7, system_prompt=None, messages=None):
+        if messages is None:
+            messages = []
+            if system_prompt:
+                messages.append({'role': 'system', 'content': system_prompt})
+            if prompt:
+                messages.append({'role': 'user', 'content': prompt})
 
-        message = [{"role": "user", "content": prompt}]
-
-        if system_prompt:
-            message = message + [additional_message]
-
-        response = self.client.chat.completions.create(
-            model=self.model,
-            messages=message,
-            temperature=temperature
-        )
-
-        return response.choices[0].message.content
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=messages,
+                temperature=temperature,
+                max_tokens=256,
+                timeout=25
+            )
+            return response.choices[0].message.content or "I'm here! What can I do for you?"
+        except Exception as e:
+            print(f"[ERROR] LLM call failed: {e}")
+            return "I'm having trouble reaching the cloud right now, but I'm still listening."
 
     def list_plugins(self):
         print("Loaded plugins:")

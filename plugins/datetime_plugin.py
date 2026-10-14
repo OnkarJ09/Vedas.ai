@@ -7,7 +7,18 @@ class Vedas:
         self.description = "Provides current date, time, day, month, or year based on user query"
         self.parameters = ["input_data"]
 
-        self.keywords = ["date", "time", "day", "month", "year"]
+        # Intent phrases for date/time queries
+        self.keywords = [
+            "what time", "what's the time", "what is the time", "current time", "tell me the time", "time now", "time please",
+            "what date", "what's the date", "what is the date", "today's date", "current date", "date today",
+            "what day", "what's the day", "what is the day", "which day", "day is today", "day is it",
+            "what month", "what's the month", "what is the month", "which month", "current month",
+            "what year", "what's the year", "what is the year", "which year", "current year",
+            "date and time", "time and date", "datetime"
+        ]
+
+        # Standalone 1-word queries when the user just asks for the time/date directly
+        self.standalone_words = ["time", "date", "day", "month", "year", "today", "datetime"]
 
         self.dependencies = []
         self.tool_map = {}
@@ -16,36 +27,47 @@ class Vedas:
         self.last_query = None
 
     def matches_query(self, query):
-        self.last_query = query.lower()
-        return any(keyword in self.last_query for keyword in self.keywords)
+        q = (query or "").strip().lower()
+        self.last_query = q
+        if q in self.standalone_words:
+            return True
+        return any(keyword in q for keyword in self.keywords)
 
     def run(self, input_data=None, state=None, **kwargs):
         print(f"[{self.name}] received:", input_data)
 
-        # Determine query source (LLM args or keyword match)
-        query = (self.last_query or input_data or "").lower()
+        query = (input_data or self.last_query or "").strip().lower()
 
-        # Handle combined case first
-        if "date" in query and "time" in query:
+        # Handle combined date + time
+        if any(p in query for p in ["date and time", "time and date", "datetime"]) or query in ["date and time", "time and date"]:
             return self.date_time()
 
-        elif "date" in query:
-            return self.date()
-
-        elif "time" in query:
-            return self.time()
-
-        elif "day" in query:
-            return self.day()
-
-        elif "month" in query:
-            return self.month()
-
-        elif "year" in query:
+        # Year intent (avoid matching general words like "final year", "next year")
+        if any(p in query for p in ["what year", "what's the year", "what is the year", "which year", "current year"]) or query == "year":
             return self.year()
 
-        # fallback
-        return self.date_time()
+        # Time intent
+        if any(p in query for p in ["what time", "what's the time", "what is the time", "current time", "tell me the time", "time now", "time please"]) or query == "time":
+            return self.time()
+
+        # Date intent
+        if any(p in query for p in ["what date", "what's the date", "what is the date", "today's date", "current date", "date today"]) or query in ["date", "today"]:
+            return self.date()
+
+        # Day intent
+        if any(p in query for p in ["what day", "what's the day", "what is the day", "which day", "day is today", "day is it"]) or query == "day":
+            return self.day()
+
+        # Month intent
+        if any(p in query for p in ["what month", "what's the month", "what is the month", "which month", "current month"]) or query == "month":
+            return self.month()
+
+        # Standalone date/time fallback if explicitly invoked
+        if query in self.standalone_words:
+            return self.date_time()
+
+        # Return None for conversational context so execute_pipeline falls back to LLM chat
+        return None
 
     # Full date + time
     def date_time(self):
