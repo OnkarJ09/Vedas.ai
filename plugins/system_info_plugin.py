@@ -7,10 +7,15 @@ class Vedas:
         self.description = "Provides system information like OS details and Python version"
         self.parameters = ["input_data"]
 
+        # Intent phrases for system/python info queries
         self.keywords = [
-            "system", "info", "information",
-            "python", "version", "ver", "py", "sys"
+            "system info", "system information", "system specs", "system status",
+            "os version", "operating system",
+            "python version", "python ver", "which python"
         ]
+
+        # Standalone queries
+        self.standalone_words = ["system info", "sysinfo", "specs", "system"]
 
         self.dependencies = []
         self.tool_map = {}
@@ -19,25 +24,31 @@ class Vedas:
         self.last_query = None
 
     def matches_query(self, query):
-        self.last_query = query.lower()
-        return any(keyword in self.last_query for keyword in self.keywords)
+        q = (query or "").strip().lower()
+        self.last_query = q
+        if q in self.standalone_words:
+            return True
+        return any(keyword in q for keyword in self.keywords)
 
     def run(self, input_data=None, state=None, **kwargs):
         print(f"[{self.name}] received:", input_data)
 
-        # Determine query source (important for LLM + chaining)
-        query = (self.last_query or input_data or "").lower()
-
-        # System info
-        if "system" in query and ("info" in query or "information" in query):
-            return f"Running on {platform.system()} {platform.release()}"
+        query = (input_data or self.last_query or "").strip().lower()
 
         # Python version
-        elif "python" in query and ("version" in query or "ver" in query):
+        if any(p in query for p in ["python version", "python ver", "which python"]) or query == "python":
             return f"Running on Python {platform.python_version()}"
 
-        # Fallback (VERY IMPORTANT)
-        return f"System: {platform.system()} {platform.release()} | Python: {platform.python_version()}"
+        # System info
+        if any(p in query for p in ["system info", "system information", "system specs", "os version", "operating system"]) or query in self.standalone_words:
+            return f"Running on {platform.system()} {platform.release()}"
+
+        # General combination
+        if "system" in query and ("info" in query or "spec" in query or "detail" in query):
+            return f"System: {platform.system()} {platform.release()} | Python: {platform.python_version()}"
+
+        # Return None so conversational queries fall back to LLM chat
+        return None
 
     def __str__(self):
         return f"{self.name} ({self.keywords})"

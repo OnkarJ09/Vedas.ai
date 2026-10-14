@@ -135,9 +135,14 @@ class PluginManager:
 
     def shortlist_plugins(self, query):
         selected = []
-        query_lower = query.lower()
+        query_lower = query.lower().strip()
 
         for name, plugin in self.plugins.items():
+            # Check standalone words first if defined by plugin (exact match for 1-word queries)
+            if hasattr(plugin, "standalone_words") and query_lower in plugin.standalone_words:
+                selected.append(name)
+                continue
+
             if hasattr(plugin, "keywords"):
                 for k in plugin.keywords:
                     # shortcut: word-boundary regex ensures 'hi' doesn't match 'nothing' or 'think'

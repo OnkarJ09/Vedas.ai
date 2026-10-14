@@ -119,13 +119,14 @@ async def take_command(lang="en"):
 
     with sr.Microphone() as source:
         print("listening...")
-        # shortcut: 1.0s pause threshold accommodates natural pauses/breathing; 25s phrase limit allows long prompts
-        recognizer.pause_threshold = 1.0
+        # shortcut: 1.8s pause threshold accommodates natural pauses/thinking; 0.8s non-speaking keeps mid-speech gaps
+        recognizer.pause_threshold = 1.8
+        recognizer.non_speaking_duration = 0.8
         recognizer.energy_threshold = 300
         recognizer.dynamic_energy_threshold = True
         recognizer.adjust_for_ambient_noise(source, duration=0.3)
         try:
-            audio = recognizer.listen(source, timeout=None, phrase_time_limit=25)
+            audio = recognizer.listen(source, timeout=None, phrase_time_limit=30)
         except sr.WaitTimeoutError:
             return ""
 
