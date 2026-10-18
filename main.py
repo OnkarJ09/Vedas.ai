@@ -32,12 +32,21 @@ if __name__ == "__main__":
     print("[DEBUG] Loaded tools:")
     plugin_manager.list_plugins()
 
+    pending_query = None
+
     while True:
         # Execute plugins/tools based on user input/queries
-        query = asyncio.run(take_command())
+        if pending_query:
+            query = pending_query
+            pending_query = None
+        else:
+            query = asyncio.run(take_command())
+
         # query = str(input("> "))      # For testing without voice input
         if not query or not query.strip():
             continue
         response = plugin_manager.execute_pipeline(query)
         if response:
-            asyncio.run(say(response))
+            interrupted_query = asyncio.run(say(response))
+            if interrupted_query:
+                pending_query = interrupted_query

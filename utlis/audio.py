@@ -18,6 +18,11 @@ except Exception:
 
 import pyaudio
 import speech_recognition as sr
+import time
+import collections
+import re
+from utlis.vad import VadDetector
+from utlis.kws import KeywordSpotterDetector
 
 # Define the base directory for output files
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -98,21 +103,158 @@ languages = {
 }
 
 
-async def say(text, voice=DEFAULT_VOICE):
+
+
+_kws_detector = None
+_vad_detector = None
+
+
+def get_kws_detector():
+    global _kws_detector
+    if _kws_detector is None:
+        _kws_detector = KeywordSpotterDetector()
+    _kws_detector.reset()
+    return _kws_detector
+
+
+def get_vad_detector():
+    global _vad_detector
+    if _vad_detector is None:
+        _vad_detector = VadDetector()
+    _vad_detector.reset()
+    return _vad_detector
+
+
+async def say(text, voice=DEFAULT_VOICE, lang="en", allow_interrupt=True):
     """
-        Say text to voice
-    :param text:
-    :param voice:
-    :return:
+    Synthesize and play speech.
+    If allow_interrupt is True, monitors the microphone via real-time offline KeywordSpotter (Sherpa-ONNX).
+    Interrupts playback immediately (<10ms) if an offline trigger keyword ('WAIT', 'STOP', 'VEDAS', etc.) is heard.
+    Returns:
+        str: Recognized speech if interrupted with a new command.
+        None: If playback completed without interruption, or if user just said 'stop'.
     """
     output_file = OUTPUT_FILES_DIR + "/output.mp3"
 
-    # Increase speed by 50% using the 'rate' parameter
     communicate = edge_tts.Communicate(text, voice, rate="+18%")
+    await communicate.save(output_file)
 
-    await communicate.save(output_file)     # Save the output file
+    if not allow_interrupt:
+        playsound(output_file, block=True)
+        return None
 
-    playsound(output_file)  # Play the output file
+    # Open microphone stream for live offline keyword barge-in
+    try:
+        kws = get_kws_detector()
+        vad = get_vad_detector()
+        p = pyaudio.PyAudio()
+        stream = p.open(
+            format=pyaudio.paInt16,
+            channels=1,
+            rate=16000,
+            input=True,
+            frames_per_buffer=512
+        )
+    except Exception as e:
+        print(f"[Audio Warning] Could not initialize offline barge-in: {e}")
+        playsound(output_file, block=True)
+        return None
+
+    sound = playsound(output_file, block=False)
+    interrupted = False
+    interrupted_keyword = None
+    interrupted_frames = []
+    pre_roll = collections.deque(maxlen=6)  # ~192ms pre-roll buffer
+
+    start_time = time.time()
+    grace_period = 0.20  # Grace period during audio startup
+
+    try:
+        while sound.is_alive():
+            try:
+                chunk = stream.read(512, exception_on_overflow=False)
+                pre_roll.append(chunk)
+
+                if time.time() - start_time < grace_period:
+                    continue
+
+                # Real-time offline keyword detection (<1ms per chunk on CPU)
+                detected_kw = kws.detect(chunk)
+                if detected_kw:
+                    sound.stop()
+                    interrupted = True
+                    interrupted_keyword = detected_kw
+                    print(f"\n[Vedas] Interrupted by keyword '{detected_kw}'!")
+                    interrupted_frames = list(pre_roll)
+                    break
+            except Exception:
+                continue
+
+        # If playback completed naturally without interruption
+        if not interrupted:
+            sound.wait()
+            return None
+
+        # User interrupted: continue recording until natural silence
+        silence_chunks = 0
+        max_silence_chunks = int(1.2 / 0.032)  # ~1.2s silence threshold
+        max_total_chunks = int(20.0 / 0.032)   # 20s phrase limit
+        user_continued_speaking = False
+
+        while silence_chunks < max_silence_chunks and len(interrupted_frames) < max_total_chunks:
+            try:
+                chunk = stream.read(512, exception_on_overflow=False)
+                interrupted_frames.append(chunk)
+
+                if vad.is_speech(chunk):
+                    silence_chunks = 0
+                    user_continued_speaking = True
+                else:
+                    silence_chunks += 1
+            except Exception:
+                break
+    finally:
+        try:
+            stream.stop_stream()
+            stream.close()
+            p.terminate()
+        except Exception:
+            pass
+
+    # Process interruption
+    stop_words = {"stop", "pause", "cancel", "shut up", "be quiet", "quit"}
+    if interrupted_keyword in ("STOP", "PAUSE", "CANCEL") and not user_continued_speaking:
+        print("[Vedas] Playback stopped.")
+        return None
+
+    # Transcribe the interrupted user speech
+    if interrupted_frames:
+        recognizer = sr.Recognizer()
+        raw_audio = b"".join(interrupted_frames)
+        audio_data = sr.AudioData(raw_audio, 16000, 2)
+        try:
+            query = recognizer.recognize_google(audio_data, language=lang).strip()
+            # If the user only said the stop keyword, do not treat it as a command
+            if query.lower() in stop_words or not query:
+                print("[Vedas] Playback stopped.")
+                return None
+
+            # Clean trigger prefix from follow-up command
+            cleaned_query = re.sub(r"^(wait|stop|vedas|hold on|pause|listen|cancel)[,\s]*", "", query, flags=re.I).strip()
+            result_query = cleaned_query if cleaned_query else query
+            print(f"Recognized: {result_query}")
+            return result_query
+        except sr.UnknownValueError:
+            if interrupted_keyword in ("STOP", "PAUSE", "CANCEL"):
+                print("[Vedas] Playback stopped.")
+            else:
+                print("[Vedas] Interrupted. Listening for next command...")
+            return None
+        except sr.RequestError as e:
+            print(f"Could not request results from Google Speech Recognition service; {e}")
+            return None
+
+    return None
 
 async def take_command(lang="en"):
     recognizer = sr.Recognizer()

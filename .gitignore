@@ -16,3 +16,8 @@ __pycache__/*
 */__pycache__/*
 */*.pyc
 */output.mp3
+
+# Runtime model files & archives
+runtime/kws_model/*
+runtime/*.onnx
+runtime/*.tar.bz2
