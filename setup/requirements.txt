@@ -9,6 +9,9 @@ SpeechRecognition>=3.10.0
 PyAudio>=0.2.14
 edge-tts>=6.1.0
 playsound3>=1.2.2
+onnxruntime>=1.16.0
+sherpa-onnx>=1.10.0
+sentencepiece>=0.2.0
 
 # Plugins & Automation
 wikipedia>=1.4.0
